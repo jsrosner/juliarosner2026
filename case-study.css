@@ -1,0 +1,286 @@
+/* ===========================
+   CASE STUDY — LAYOUT
+=========================== */
+
+.cs-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.cs-header {
+  padding: 80px 0 60px;
+  border-bottom: 1px solid var(--grey-light);
+}
+
+.cs-back {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--grey-text);
+  margin-bottom: 32px;
+  transition: color 0.2s;
+}
+
+.cs-back:hover {
+  color: var(--black);
+}
+
+.cs-header .tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+  margin-bottom: 16px;
+}
+
+.cs-header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.cs-subtitle {
+  font-size: 19px;
+  color: var(--grey-text);
+  line-height: 1.7;
+  max-width: 55ch;
+  margin-bottom: 48px;
+}
+
+.cs-meta {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.cs-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cs-meta-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+}
+
+.cs-meta-item span:last-child {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ===========================
+   HERO IMAGE
+=========================== */
+
+.cs-hero-image {
+  position: relative;
+  background: var(--grey-light);
+  aspect-ratio: 16/7;
+  overflow: hidden;
+}
+
+.cs-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-hero-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-mid);
+  font-size: 14px;
+}
+
+/* ===========================
+   BODY CONTENT
+=========================== */
+
+.cs-body {
+  padding: 80px 0 120px;
+}
+
+.cs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cs-section {
+  margin-bottom: 72px;
+}
+
+.cs-section h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.cs-section p {
+  color: var(--grey-text);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  max-width: 65ch;
+}
+
+.cs-section p:last-child {
+  margin-bottom: 0;
+}
+
+.cs-quote {
+  border-left: 3px solid var(--green);
+  padding: 16px 24px;
+  margin: 32px 0;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--black);
+  background: var(--grey-light);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* ===========================
+   IMAGES
+=========================== */
+
+.cs-image-full {
+  margin-bottom: 72px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--grey-light);
+  position: relative;
+}
+
+.cs-image-full img {
+  width: 100%;
+  display: block;
+}
+
+.cs-image-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-mid);
+  font-size: 14px;
+  min-height: 320px;
+}
+
+.cs-caption {
+  padding: 12px 20px;
+  font-size: 13px;
+  color: var(--grey-text);
+  background: var(--grey-light);
+}
+
+.cs-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 72px;
+}
+
+.cs-image-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--grey-light);
+  position: relative;
+}
+
+.cs-image-item img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.cs-image-item .cs-image-placeholder {
+  min-height: 200px;
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.cs-stats {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding: 40px;
+  background: var(--grey-light);
+  border-radius: var(--radius);
+}
+
+.cs-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cs-stat-number {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--green);
+  line-height: 1;
+}
+
+.cs-stat-label {
+  font-size: 13px;
+  color: var(--grey-text);
+  max-width: 16ch;
+  line-height: 1.4;
+}
+
+/* ===========================
+   PROJECT NAV
+=========================== */
+
+.cs-nav-projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 64px;
+  border-top: 1px solid var(--grey-light);
+  margin-top: 40px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 760px) {
+  .cs-container {
+    padding: 0 20px;
+  }
+
+  .cs-header {
+    padding: 48px 0 40px;
+  }
+
+  .cs-meta {
+    gap: 28px;
+  }
+
+  .cs-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-stats {
+    gap: 32px;
+    padding: 28px;
+  }
+}
