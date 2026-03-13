@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadie 2.0 Design System — Julia Rosner-Uddin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-name">Julia Rosner-Uddin</a>
+    <ul>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO LAYOUT -->
+  <div class="cs-hero-layout">
+
+    <!-- HERO IMAGE -->
+    <div class="cs-hero-image">
+      <img src="images/roadie_hero.png" alt="Roadie 2.0 Design System" onerror="this.style.display='none'" />
+      <div class="cs-hero-placeholder"><span>Add your hero image here</span></div>
+    </div>
+
+    <!-- CASE STUDY HEADER -->
+    <header class="cs-header cs-header--yellow">
+      <div class="cs-container">
+        <a href="index.html" class="cs-back">← Back to work</a>
+        <span class="tag">Design Systems · Cross-platform</span>
+        <h1>Roadie 2.0 Design System</h1>
+        <p class="cs-subtitle">Initiating a cross-functional effort to scale and systematise — building a unified component library across Figma, React Native, iOS, and Android codebases.</p>
+        <div class="cs-meta">
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Role</span>
+            <span>Lead Designer</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Timeline</span>
+            <span>2 quarters</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Focus</span>
+            <span>Design Systems</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Team</span>
+            <span>2 Designers · 4+ Native Eng · 2+ React Native Eng</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  </div>
+
+  <!-- BODY -->
+  <main class="cs-body">
+    <div class="cs-container cs-content">
+
+      <!-- OVERVIEW -->
+      <section class="cs-section">
+        <h2>Overview</h2>
+        <p>Songkick's existing design system, called Roadie, existed in Figma — but was rarely used. Engineers and designers were routinely rebuilding components and setting new styles from scratch rather than reusing from the library. This led to component divergence and friction that threatened delivery speed.</p>
+        <p>I initiated and led a cross-functional initiative to create a unified component library — Roadie 2.0 — starting with comprehensive Figma and code audits, and working closely with engineering partners across three platforms.</p>
+      </section>
+
+      <!-- CORE PROBLEM / APPROACH / OUTCOME -->
+      <div class="cs-three-col">
+        <div class="cs-three-col-item">
+          <h3>Core problem</h3>
+          <p>Existing 'Roadie' library existed but wasn't widely adopted. Every new feature meant rebuilding components individually — creating inconsistency, slowing delivery, and accumulating design debt across all platforms.</p>
+        </div>
+        <div class="cs-three-col-item">
+          <h3>Approach</h3>
+          <p>Brought engineering partners on board early. Conducted comprehensive Figma and code audits across React Native and Native (iOS/Android) codebases. Goal: one design source in Figma, three consistent code implementations.</p>
+        </div>
+        <div class="cs-three-col-item">
+          <h3>Outcome</h3>
+          <p>168 variables and 59 styles across light and dark mode, available in Figma and all codebases — resulting in an estimated 40% increase in engineering efficiency and 50% in design.</p>
+        </div>
+      </div>
+
+      <div class="cs-image-grid">
+        <div class="cs-image-item">
+          <img src="images/roadie_core-problem.png" alt="Roadie 2.0 foundations" onerror="this.style.display='none'" />
+          <p class="cs-caption">The foundations layer — covering type, colour, spacing, radius, opacity, and blur across light and dark modes</p>
+        </div>
+
+        <div class="cs-image-item">
+          <img src="images/roadie_approach.png" alt="Roadie 2.0 foundations" onerror="this.style.display='none'" />
+          <p class="cs-caption">The foundations layer — covering type, colour, spacing, radius, opacity, and blur across light and dark modes</p>
+        </div>
+
+        <div class="cs-image-item">
+          <img src="images/roadie_outcome.png" alt="Roadie 2.0 foundations" onerror="this.style.display='none'" />
+          <p class="cs-caption">The foundations layer — covering type, colour, spacing, radius, opacity, and blur across light and dark modes</p>
+        </div>
+      </div>
+
+      <!-- CROSS-PLATFORM PARITY -->
+      <section class="cs-section">
+        <h2>Cross-platform parity</h2>
+        <p>The central challenge was designing a unified system that served both the React Native team and the Native (iOS/Android) team — three distinct codebases with different technical constraints and conventions.</p>
+        <p>I established rigorous cross-functional governance to link a single design source in Figma to all three implementations. Platform-specific limitations — relating to blur, stroke transparency, and modal behaviour — were proactively addressed and documented as exceptions rather than workarounds, allowing us to maintain maximum platform parity without compromising component quality.</p>
+      </section>
+
+     <div class="cs-image-full">
+        <img src="images/roadie_cross-platform-parity.png" alt="Colour token reskin" onerror="this.style.display='none'" />
+        <p class="cs-caption">3 token changes → full-app reskin across iOS and Android, deployed in hours instead of days</p>
+      </div>
+
+      <!-- ROADIE IN ACTION -->
+      <section class="cs-section">
+        <h2>Roadie in action: leveraging colour tokens</h2>
+        <p>During the promotional window for a major artist's album release, the business asked for a full-app visual reskin to match the album's distinct pink colour palette. Previously, this would have required designers and engineers to manually update hundreds of individual instances one by one — days of work.</p>
+        <p>Leveraging the new design system, we treated this as a simple theming exercise: we only needed to change <strong>3 core colour tokens</strong> within our shared library. The change instantly and consistently propagated across hundreds of instances on both Android and iOS.</p>
+        <blockquote class="cs-quote">
+          "Okay so, now I have every single button in pink on my iPad... and I just wanna say it's so cute 🥰🥰 App Gods, love that!" — User reaction on social media
+        </blockquote>
+      </section>
+
+      <!-- FULL-WIDTH IMAGE -->
+      <div class="cs-image-full">
+        <img src="images/roadie_in-action.png" alt="Colour token reskin" onerror="this.style.display='none'" />
+        <p class="cs-caption">3 token changes → full-app reskin across iOS and Android, deployed in hours instead of days</p>
+      </div>
+
+      <!-- OUTCOMES -->
+      <section class="cs-section">
+        <h2>Outcomes</h2>
+        <div class="cs-stats">
+          <div class="cs-stat">
+            <span class="cs-stat-number">40%</span>
+            <span class="cs-stat-label">Estimated increase in engineering efficiency</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-number">50%</span>
+            <span class="cs-stat-label">Estimated increase in design efficiency</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-number">138/197</span>
+            <span class="cs-stat-label">UI code files referencing the system (~70%)</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-number">100K+</span>
+            <span class="cs-stat-label">Component insertions in design files in one year</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="cs-image-full">
+        <img src="images/roadie_workflows.png" alt="Design system adoption" onerror="this.style.display='none'" />
+        <p class="cs-caption">138 of 197 UI code files referencing Roadie 2.0 within one year of launch — ~70% codebase adoption</p>
+      </div>
+
+      <!-- TEAM FEEDBACK -->
+      <section class="cs-section">
+        <h2>Team feedback</h2>
+        <blockquote class="cs-quote">
+          "The biggest area of improvement is we can quickly map the Figma to the code, so we don't need to look into the specific values for colour hex codes, opacity, etc." — iOS Lead
+        </blockquote>
+        <blockquote class="cs-quote">
+          "I deleted a tonne of code because of the design system. It's been a game changer for us." — iOS Engineer
+        </blockquote>
+        <blockquote class="cs-quote">
+          "Love the new design system. Not easy to design for two apps at the same time but it looks amazing and is super easy to use." — Android Lead
+        </blockquote>
+      </section>
+
+      <!-- PROJECT NAV -->
+      <div class="cs-nav-projects">
+        <a href="project2.html" class="link-arrow">← Attendance Optimization</a>
+        <a href="project4.html" class="link-arrow">Checkout Flows →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Julia Rosner-Uddin. Designed & built with care.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

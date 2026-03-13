@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julia Rosner — Product Designer</title>
+  <title>Julia Rosner-Uddin — Product Designer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case-study.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
@@ -13,7 +14,7 @@
 
   <!-- NAV -->
   <nav>
-    <span class="nav-name">Julia Rosner</span>
+    <span class="nav-name">Julia Rosner-Uddin</span>
     <ul>
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
@@ -24,9 +25,24 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <p class="hero-label">Senior Product Designer</p>
-      <h1>Designing products<br/><em>people actually love.</em></h1>
-      <p class="hero-sub">I help teams turn complex problems into clear, beautiful, and usable experiences. Based in [Your City].</p>
+      <p class="hero-label">Product Designer · San Francisco</p>
+      <h1>Solving the messy, complex problems that stand in the way of growth. </h1>
+      <p class="hero-sub">I'm Julia, a designer who loves turning ambiguity into clear, compelling experiences — and bringing teams with me. 6+ years designing web and mobile products.</p>
+      <h4>Previously at</h4>
+      <div class="hero-companies">
+        <span class="company-tag">
+          <img src="images/warnermusic.png" alt="Warner Music Group" onerror="this.style.display='none'" />
+          Warner Music Group
+        </span>
+        <span class="company-tag">
+          <img src="images/songkick.png" alt="Songkick" onerror="this.style.display='none'" />
+          Songkick
+        </span>
+        <span class="company-tag">
+          <img src="images/culturesuite.png" alt="CultureSuite" onerror="this.style.display='none'" />
+          CultureSuite
+        </span>
+      </div>
       <a href="#work" class="btn">See my work</a>
     </div>
   </section>
@@ -36,19 +52,15 @@
     <div class="container">
       <h2 class="section-title">Selected work</h2>
 
-      <!-- Project 1 -->
-      <div class="project project--large">
+      <!-- Project 1 — New Onboarding Flow -->
+      <div class="project project--large card cs-header--purple">
         <div class="project-image">
-          <!-- Replace the src below with your own image file, e.g. images/project1.jpg -->
-          <img src="images/project1.jpg" alt="Project 1 screenshot" onerror="this.style.display='none'" />
-          <div class="project-placeholder">
-            <span>Add your project image here</span>
-          </div>
+          <img src="images/card_onboarding.png" alt="New Onboarding Flow" onerror="this.style.display='none'" />
         </div>
         <div class="project-info">
-          <span class="tag">UX / Product Design</span>
-          <h3>Project Title One</h3>
-          <p>A short description of the project — what the problem was, what you designed, and what the outcome was. Keep it 2–3 sentences. You can replace this with your real project summary.</p>
+          <span class="tag">Mobile · iOS · Activation</span>
+          <h3>New Onboarding Flow</h3>
+          <p>A major end-to-end redesign of the onboarding experience for a concert discovery app with 460K MAUs. By re-sequencing, shortening, and contextualising core activation steps, we doubled day 7 retention and drove a 16% uplift in high-value actions in the first session.</p>
           <a href="project1.html" class="link-arrow">View case study →</a>
         </div>
       </div>
@@ -56,39 +68,41 @@
       <!-- Project grid (smaller cards) -->
       <div class="project-grid">
 
-        <div class="card">
-          <div class="card-image">
-            <img src="images/project3.jpg" alt="Project 3" onerror="this.style.display='none'" />
-            <div class="card-placeholder"><span>Image</span></div>
-          </div>
-          <span class="tag">Design Systems</span>
-          <h4>Project Title Three</h4>
-          <p>Short one-line description of this project.</p>
-          <a href="#" class="link-arrow">View →</a>
+        <div class="card cs-header--blue">
+            <div class="project-info">
+              <span class="tag">Mobile · Engagement</span>
+              <h4>Attendance Optimization</h4>
+              <p>Achieving a near-100% metric gain — without building new features.</p>
+              <a href="project2.html" class="link-arrow">View →</a>
+            </div>
+            <div class="card-image">
+              <img src="images/card_attendance.png" alt="Attendance Optimization" onerror="this.style.display='none'" />
+            </div>
         </div>
 
-                <div class="card">
+        <div class="card cs-header--yellow">
           <div class="card-image">
-            <img src="images/project3.jpg" alt="Project 3" onerror="this.style.display='none'" />
-            <div class="card-placeholder"><span>Image</span></div>
+            <img src="images/card_roadie.png" alt="Roadie 2.0 Design System" onerror="this.style.display='none'" />
           </div>
-          <span class="tag">Design Systems</span>
-          <h4>Project Title Three</h4>
-          <p>Short one-line description of this project.</p>
-          <a href="#" class="link-arrow">View →</a>
+            <div class="project-info">
+              <span class="tag">Design Systems</span>
+              <h4>Roadie 2.0 Design System</h4>
+              <p>Initiating a cross-functional, cross-platform design system effort.</p>
+              <a href="project3.html" class="link-arrow">View →</a>
+            </div>
         </div>
 
-        <div class="card">
-          <div class="card-image">
-            <img src="images/project4.jpg" alt="Project 4" onerror="this.style.display='none'" />
-            <div class="card-placeholder"><span>Image</span></div>
+        <div class="card cs-header--orange">
+            <div class="project-info">
+              <span class="tag">Web · Conversion</span>
+              <h4>Two Custom Checkout Flows</h4>
+              <p>Architecting the purchase path experience for two iconic London venues.</p>
+              <a href="project4.html" class="link-arrow">View →</a>
+            </div>
+            <div class="card-image">
+              <img src="images/card_purchase-path.png" alt="Two Custom Checkout Flows" onerror="this.style.display='none'" />
           </div>
-          <span class="tag">Mobile / iOS</span>
-          <h4>Project Title Four</h4>
-          <p>Short one-line description of this project.</p>
-          <a href="#" class="link-arrow">View →</a>
         </div>
-
       </div>
     </div>
   </section>
@@ -97,15 +111,15 @@
   <section id="about" class="section section--alt">
     <div class="container about-grid">
       <div class="about-image">
-        <!-- Replace with your own photo: images/photo.jpg -->
-        <img src="images/photo.jpg" alt="Julia Rosner" onerror="this.style.display='none'" />
+        <img src="images/photo.jpg" alt="Julia Rosner-Uddin" onerror="this.style.display='none'" />
         <div class="about-placeholder"><span>Your photo here</span></div>
       </div>
       <div class="about-text">
         <h2>About me</h2>
-        <p>Hi, I'm Julia — a Senior Product Designer with [X] years of experience designing digital products for [type of companies, e.g. startups and scale-ups].</p>
-        <p>I specialise in [e.g. complex B2B products / consumer apps / design systems]. I care deeply about the intersection of user needs and business goals, and I believe great design is as much about clarity and strategy as it is about aesthetics.</p>
-        <p>Previously at <strong>[Company A]</strong>, <strong>[Company B]</strong>, and <strong>[Company C]</strong>. Currently [available for freelance / open to new roles / working at X].</p>
+        <p>I'm Julia, an SF-based product designer with 6+ years of experience across web and mobile apps. I've most recently worked at <strong>Warner Music Group</strong>.</p>
+        <p>I'm dedicated to driving strategic alignment, using data analysis to steer design decisions and guarantee they result in measurable user and business success.</p>
+        <p>I thrive on collaboration, working through ambiguity and helping move teams forward — translating core problems into crisp, compelling solutions, and using impeccable craft and storytelling to bring stakeholders and engineers on board.</p>
+        <p>When I'm not in front of a screen, I'm usually doing something crafty or enjoying live music. I love the arts in all its forms.</p>
         <div class="skills">
           <span class="skill-tag">UX Research</span>
           <span class="skill-tag">Product Strategy</span>
@@ -114,6 +128,7 @@
           <span class="skill-tag">Figma</span>
           <span class="skill-tag">Prototyping</span>
           <span class="skill-tag">User Testing</span>
+          <span class="skill-tag">Data Analysis</span>
           <span class="skill-tag">Workshop Facilitation</span>
         </div>
         <a href="images/julia-rosner-cv.pdf" class="btn btn--outline" download>Download CV</a>
@@ -126,18 +141,17 @@
     <div class="container contact-inner">
       <h2>Let's talk</h2>
       <p>Whether you have a project in mind or just want to connect — I'd love to hear from you.</p>
-      <a href="mailto:hello@juliarosner.com" class="btn">hello@juliarosner.com</a>
+      <a href="mailto:julia.s.rosner@gmail.com" class="btn">julia.s.rosner@gmail.com</a>
       <div class="social-links">
         <a href="https://linkedin.com/in/juliarosner" target="_blank">LinkedIn</a>
         <a href="https://read.cv/juliarosner" target="_blank">Read.cv</a>
-        <!-- Add or remove links as needed -->
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Julia Rosner. Designed & built with care.</p>
+    <p>© 2026 Julia Rosner-Uddin. Designed & built with care.</p>
   </footer>
 
   <script src="script.js"></script>

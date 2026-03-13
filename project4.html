@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two Custom Checkout Flows — Julia Rosner-Uddin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-name">Julia Rosner-Uddin</a>
+    <ul>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO LAYOUT -->
+  <div class="cs-hero-layout">
+
+    <!-- HERO IMAGE -->
+    <div class="cs-hero-image">
+      <img src="images/purchase-paths_hero.png" alt="Two Custom Checkout Flows hero" onerror="this.style.display='none'" />
+      <div class="cs-hero-placeholder"><span>Add your hero image here</span></div>
+    </div>
+
+    <!-- CASE STUDY HEADER -->
+    <header class="cs-header cs-header--orange">
+      <div class="cs-container">
+        <a href="index.html" class="cs-back">← Back to work</a>
+        <span class="tag">Web · Conversion · Agency</span>
+        <h1>Two Custom Checkout Flows</h1>
+        <p class="cs-subtitle">Architecting the purchase path experience for two iconic London venues — The Old Vic and The Roundhouse — on a proprietary white-label ticketing platform.</p>
+        <div class="cs-meta">
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Role</span>
+            <span>Lead Product Designer</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Timeline</span>
+            <span>~6 months each</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Focus</span>
+            <span>Conversion</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Team</span>
+            <span>1 PM · 1 Designer · 5 Engineers</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  </div>
+
+  <!-- BODY -->
+  <main class="cs-body">
+    <div class="cs-container cs-content">
+
+      <!-- OVERVIEW -->
+      <section class="cs-section">
+        <h2>Overview</h2>
+        <p>I led the design execution of two major digital transformations for The Old Vic and The Roundhouse — two of London's most iconic cultural venues. Both institutions relied on Skyway, a proprietary white-label event engine that integrated directly into their CRM system, Tessitura.</p>
+        <p>While the functional plumbing was standardised, the user journeys were anything but. My challenge was to architect branded, friction-free checkout flows that respected complex business logic while maintaining the integrity of two very different brands.</p>
+      </section>
+
+      <div class="cs-image-full">
+        <img src="images/purchase-path_venues.png" alt="Component system across both brands" onerror="this.style.display='none'" />
+        <p class="cs-caption">One reusable component system underpinning two entirely different brand experiences — the key to scalable delivery</p>
+      </div>
+
+      <div class="cs-image-full">
+        <img src="images/purchase-paths_background.png" alt="The Old Vic and The Roundhouse" onerror="this.style.display='none'" />
+        <p class="cs-caption">Two of London's most iconic cultural venues — each with a distinct brand identity and complex ticketing requirements</p>
+      </div>
+
+      <!-- CONTEXT / CHALLENGE -->
+      <section class="cs-section">
+        <h2>The challenge</h2>
+        <p>Both venues had sophisticated requirements far beyond a standard e-commerce checkout. The Old Vic's flow needed to handle tiered membership upsells with inline promotional messaging, loyalty points, access ticketing schemes (with separate eligibility paths), and charitable donation prompts. The Roundhouse added complex room booking flows with participant details, youth mailing list opt-ins, and date-of-birth verification for age-restricted programmes.</p>
+        <p>All of this had to be architected within the structural constraints of Tessitura — a highly specialised CRM with rigid data schemas — while feeling intuitive and native to each venue's brand.</p>
+      </section>
+
+      <!-- FULL-WIDTH IMAGE -->
+      <div class="cs-image-full">
+        <img src="images/purchase-paths_comparison.png" alt="Both checkout flows side by side" onerror="this.style.display='none'" />
+        <div class="cs-image-placeholder"><span>The Roundhouse & The Old Vic checkout flows side by side</span></div>
+        <p class="cs-caption">Two distinct brands, one shared platform — the challenge was making each feel entirely its own</p>
+      </div>
+
+      <!-- TWO BRANDS -->
+      <section class="cs-section">
+        <h2>A fully branded experience</h2>
+        <p>The Old Vic's brand is heavily typographic and monochrome — precise, theatrical, authoritative. The Roundhouse is dark, bold, and high-energy — reflecting its music and youth culture heritage. Both had to be translated into a purchase path that felt like a seamless extension of the main venue website, not a third-party bolt-on.</p>
+        <p>In both cases, considered typographic treatment and careful colour application were crucial — balancing brand expression with the demands of information-dense checkout pages that need to feel intuitive and easily scannable. I worked with engineering to establish a base of tested, reusable components that could be customised to fit the needs of both clients.</p>
+      </section>
+
+      <div class="cs-image-full">
+        <img src="images/purchase-paths_branded-approach.png" alt="Both checkout flows side by side" onerror="this.style.display='none'" />
+        <div class="cs-image-placeholder"><span>The Roundhouse & The Old Vic checkout flows side by side</span></div>
+        <p class="cs-caption">Two distinct brands, one shared platform — the challenge was making each feel entirely its own</p>
+      </div>
+
+      <!-- INTELLIGENT DATA COLLECTION -->
+      <section class="cs-section">
+        <h2>Intelligent data collection</h2>
+        <p>Both venues required sophisticated form architecture — from complex room booking requirements at the Roundhouse to legal declarations and charitable donation flows at The Old Vic.</p>
+        <p>To prevent form fatigue, I used a <strong>progressive reveal strategy</strong>: secondary information — such as accessibility requirements, participant details, or date-of-birth verification — was only surfaced based on the user's previous selections. This kept the interface focused on the primary task at hand and significantly reduced perceived complexity.</p>
+      </section>
+
+      <div class="cs-image-full">
+        <img src="images/purchase-paths_data-collection.png" alt="Both checkout flows side by side" onerror="this.style.display='none'" />
+        <p class="cs-caption">Two distinct brands, one shared platform — the challenge was making each feel entirely its own</p>
+      </div>
+
+      <!-- BEFORE / AFTER: FORM -->
+      <div class="cs-before-after">
+        <div class="cs-before">
+          <span class="cs-ba-label">Traditional approach</span>
+          <div class="cs-ba-item">
+            <strong>All fields shown upfront</strong>
+            Users presented with a wall of inputs regardless of relevance — leading to confusion and abandonment.
+          </div>
+          <div class="cs-ba-item">
+            <strong>Generic form structure</strong>
+            No differentiation between booking for self vs. someone else; no conditional logic for eligibility paths.
+          </div>
+        </div>
+        <div class="cs-after">
+          <span class="cs-ba-label">Progressive reveal</span>
+          <div class="cs-ba-item">
+            <strong>Context-sensitive fields</strong>
+            Participant details, date-of-birth, and accessibility requirements only appear when relevant to the user's selection.
+          </div>
+          <div class="cs-ba-item">
+            <strong>Conditional eligibility paths</strong>
+            'Booking for someone else' surfaces a dedicated participant flow; membership prompts appear inline at the moment of relevance.
+          </div>
+        </div>
+      </div>
+
+      <!-- TECHNICAL CONSTRAINTS -->
+      <section class="cs-section">
+        <h2>Technical constraints</h2>
+        <p>I had to work within the structural parameters of Tessitura — a highly specialised CRM with rigid data schemas. I collaborated closely with backend engineers to map every front-end input to a specific Tessitura attribute.</p>
+        <p>When the CRM lacked a native field for a UX requirement, I worked with the technical team to architect custom data hooks — capturing and storing specialised user data without compromising the stability of the core ticketing engine. This required translating UX intent into technical feasibility in close collaboration with engineering throughout the project.</p>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="cs-section">
+        <h2>Outcomes</h2>
+        <p>Both purchase paths launched on schedule to high client satisfaction. While the agency context limits long-term data access, initial performance indicators were overwhelmingly positive across two fronts:</p>
+
+        <div class="cs-three-col">
+          <div class="cs-three-col-item">
+            <h3>Conversion</h3>
+            <p>Both venues saw an immediate increase in checkout completion rates following launch — attributed to reduced friction across the booking flow and improved form architecture.</p>
+          </div>
+          <div class="cs-three-col-item">
+            <h3>Support reduction</h3>
+            <p>Optimised data collection through well-paced, efficient form design reduced the volume of customer support inquiries received by box office staff post-launch.</p>
+          </div>
+          <div class="cs-three-col-item">
+            <h3>Operational efficiency</h3>
+            <p>Mapping UI inputs directly to Tessitura CRM requirements reduced the manual data cleaning previously required by venue staff — freeing them to focus on high-value member relations.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- REFLECTION -->
+      <section class="cs-section">
+        <h2>Reflection</h2>
+        <p>This project pushed me to think carefully about the intersection of brand expression and functional clarity — two things that can easily work against each other in a complex checkout flow. The solution was always in the components: designing a reusable base that could be dressed for either brand without compromising the underlying UX logic.</p>
+        <p>Working within the constraints of a third-party CRM also sharpened my ability to collaborate with engineers early and often — turning technical limitations into design decisions rather than late-stage surprises.</p>
+      </section>
+
+      <div class="cs-image-full">
+        <img src="images/purchase-paths_seatmap.png" alt="Component system across both brands" onerror="this.style.display='none'" />
+        <p class="cs-caption">One reusable component system underpinning two entirely different brand experiences — the key to scalable delivery</p>
+      </div>
+
+      <!-- PROJECT NAV -->
+      <div class="cs-nav-projects">
+        <a href="project3.html" class="link-arrow">← Roadie 2.0</a>
+        <a href="index.html#work" class="link-arrow">All projects →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Julia Rosner-Uddin. Designed & built with care.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

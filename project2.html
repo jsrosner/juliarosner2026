@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance Optimization — Julia Rosner-Uddin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-name">Julia Rosner-Uddin</a>
+    <ul>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO LAYOUT -->
+  <div class="cs-hero-layout">
+
+    <!-- HERO IMAGE -->
+    <div class="cs-hero-image">
+      <img src="images/attendance_hero.png" alt="Attendance Optimization hero" onerror="this.style.display='none'" />
+    </div>
+
+    <!-- CASE STUDY HEADER -->
+    <header class="cs-header cs-header--blue">
+      <div class="cs-container">
+        <a href="index.html" class="cs-back">← Back to work</a>
+        <span class="tag">Mobile · iOS · Engagement</span>
+        <h1>Attendance Optimization</h1>
+        <p class="cs-subtitle">Achieving a near-100% metric gain — without building new features. A systemic, component-level approach that doubled the rate of users marking attendance to events.</p>
+        <div class="cs-meta">
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Timeline</span>
+            <span>Targeted improvements shipped over a period of ~9 months</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Focus</span>
+            <span>Engagement</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Team</span>
+            <span>1 PM · 1 Designer 🙋‍♀️ · 2 Engineers</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Key result</span>
+            <span>Doubling the rate of users marking attendance to events in the app (i.e. marking ‘Interested’ or ‘Going’): from 7–8% to ~15%.</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  </div>
+
+  <!-- BODY -->
+  <main class="cs-body">
+    <div class="cs-container cs-content">
+
+      <!-- OVERVIEW -->
+      <section class="cs-section">
+        <h2>Overview</h2>
+        <p>On Songkick, marking 'Interested' or 'Going' to an event is one of the most important actions a user can take. It feeds personalised content, powers re-engagement channels, and directly contributes to marketable audience segmentation — making it central to both the user experience and the business model.</p>
+        <p>With extremely limited engineering bandwidth and a mandate to avoid major feature builds, we had to identify high-leverage opportunities that could move the needle without rebuilding anything from scratch.</p>
+      </section>
+
+      <!-- CONTEXT / BUSINESS CASE / CONSTRAINT -->
+      <section class="cs-section">
+        <h2>Context</h2>
+        <p>19% of sessions resulted in finding an event — but only 7% of users actually marked attendance. The problem wasn't the quality of recommendations. The engagement mechanisms simply weren't in place.</p>
+        <h2>The business case</h2>
+        <p>Marking attendance improves long-term user data quality, improves the feed experience, and increases LTV. It also directly feeds Songkick's marketable audience segmentation — a key commercial lever.</p>
+        <h2>The constraint</h2>
+        <p>2 engineers, no major feature builds. We had to shift focus from building new to optimising existing. As a team, we agreed attendance was the biggest opportunity area.</p>
+      </section>
+
+      <!-- RESEARCH -->
+      <section class="cs-section">
+        <h2>Research & hypothesis</h2>
+        <p>I carried out a detailed audit of every screen where attendance-marking could plausibly be surfaced. The finding: no single screen was the failure point. Instead, the 'Interested/Going' options were simply not sufficiently visible, consistent, or available at the moment of highest user intent.</p>
+        <p>In continuous discovery interviews, <strong>4 out of 6 app users</strong> told us they were unsure what the '+' symbol meant or what value it would provide. The core action was hidden in plain sight.</p>
+        <div class="cs-callout">
+          <p>Hypothesis: the lack of systemic availability was the key opportunity — driving improvement through low-effort, high-impact component changes rather than new features.</p>
+        </div>
+      </section>
+
+      <div class="cs-image-full">
+        <img src="images/attendance_process.png" alt="Surface audit" onerror="this.style.display='none'" />
+        <p class="cs-caption">Mapping every screen where attendance could be surfaced revealed the scope of the systemic gap</p>
+      </div>
+
+      <!-- DESIGN APPROACH -->
+      <section class="cs-section">
+        <h2>Design approach: ubiquitous, consistent, reusable</h2>
+        <p>My approach was to ensure the attendance marking options were systemically surfaced at every relevant touchpoint across the app. This was achieved by designing a small set of reusable, high-visibility button components that could be deployed across the entire product ecosystem with minimal engineering work.</p>
+      </section>
+
+      <section class="cs-section">
+        <h2>First, new components</h2>
+        <p>
+          I designed a recognizable set of high-visibility Interested/Going CTAs and toasts, ensuring maximum visual consistency and reusability. In conjunction with this I also redesigned ‘Tracking’ and ‘I was there’ CTAs to be part of the same family of CTAs.
+For the high-traffic horizontal event cards, I streamlined the secondary action into a single CTA button that cycles through the three possible states (Not Set → Interested → Going). 
+This reduces friction in the highest-volume areas of the app, instantly exposing the core action.
+        </p>
+      </section>
+
+      <!-- IMAGES -->
+      <div class="cs-image-full">
+        <img src="images/attendance_components.png" alt="New attendance button components" onerror="this.style.display='none'" />
+        <div class="cs-image-placeholder"><span>New attendance button component system</span></div>
+        <p class="cs-caption">The new Interested/Going CTA family — designed once, deployed across every surface in the app</p>
+      </div>
+
+      <!-- NAV CHANGE -->
+      <section class="cs-section">
+        <h2>Then: a simple nav change</h2>
+        <p>The section summarising a user's saved events ('Your Plans') was buried on the Profile page. This reduced discoverability and — since events weren't differentiated by 'Interested' or 'Going' status — made it cumbersome to use as a tool for planning, lowering the incentive to mark attendance even further.</p>
+        <p>The solution was simple and high-leverage: promote 'Your Plans' to its own dedicated nav item in the bottom tab bar. This immediately solved the discoverability issue. We also integrated the new attendance CTA directly into the list view, allowing users to verify and modify their status without leaving the page — closing the feedback loop and reinforcing the marking behaviour.</p>
+      </section>
+
+      <!-- FULL-WIDTH IMAGE -->
+      <div class="cs-image-full">
+        <img src="images/attendance_nav-change.png" alt="Your Plans nav change" onerror="this.style.display='none'" />
+        <p class="cs-caption">Promoting 'Your Plans' to the main tab bar immediately closed the feedback loop for attendance marking</p>
+      </div>
+
+      <!-- OUTCOMES -->
+      <section class="cs-section">
+        <h2>Outcomes</h2>
+        <p>The attendance marking rate doubled over the course of three quarters, validating our strategy of targeted, component-level improvements. Each shipped change produced a visible step-change in the metric.</p>
+        <div class="cs-stats">
+          <div class="cs-stat">
+            <span class="cs-stat-number">×2</span>
+            <span class="cs-stat-label">Attendance marking rate (7–8% → ~15%)</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-number">3</span>
+            <span class="cs-stat-label">Quarters of incremental, data-driven improvements</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-number">0</span>
+            <span class="cs-stat-label">New features built — optimisation only</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- REFLECTION -->
+      <section class="cs-section">
+        <h2>Reflection</h2>
+        <p><strong>Leveraging the design system.</strong> Working with reusable components was the key enabler. The design system functioned as a force multiplier — solving multiple localised UX problems through a handful of systemic changes, justifying the design investment to the business.</p>
+        <p><strong>Visibility is king.</strong> The sheer impact of making core CTAs consistent and visible across the entire app exceeded initial expectations. The primary block was discoverability and systemic friction, not a single broken screen.</p>
+        <p><strong>Shifting user behaviour.</strong> We transformed attendance marking from a hidden feature used mainly by power users into an intuitive, ubiquitous touchpoint that delivers immediate value and reinforces engagement.</p>
+      </section>
+
+      <div class="cs-image-full">
+        <img src="images/project2-shipped.jpg" alt="Shipped attendance components across the app" onerror="this.style.display='none'" />
+        <div class="cs-image-placeholder"><span>Shipped — attendance CTAs deployed across every surface</span></div>
+        <p class="cs-caption">The final component system in production — consistent, labelled, and available at every moment of user intent</p>
+      </div>
+      </section>
+
+      <div class="cs-image-full">
+        <img src="images/attendance_outcomes.png" alt="Attendance rate over time" onerror="this.style.display='none'" />
+        <p class="cs-caption">Each shipped iteration produced a visible step-change — from 7% to ~15% over three quarters</p>
+      </div>
+
+      <!-- THINKING AHEAD -->
+      <section class="cs-section">
+        <h2>Thinking ahead</h2>
+        <p>While our optimisation efforts established a strong 15% baseline, I initiated a feature exploration to identify what more radical growth could look like. This centred on redesigning the user profile to include attendance-powered features: a detailed 'Gigography' (a timeline and scrapbook of past events) and a 'Stats' section with data-driven insights into a user's live music habits.</p>
+        <p>Testing this vision with existing users provided strong initial validation:</p>
+        <blockquote class="cs-quote">
+          "Right now I have 80–90% of my attendance. Stats would make me add it 100% of the time." — User testing participant
+        </blockquote>
+      </section>
+
+      <div class="cs-image-full">
+        <img src="images/attendance_thinking-ahead.png" alt="Gigography and Stats concept" onerror="this.style.display='none'" />
+        <p class="cs-caption">Concept designs for 'Gigography' and attendance-driven stats — both validated as high-motivation features in user testing</p>
+      </div>
+
+      <!-- PROJECT NAV -->
+      <div class="cs-nav-projects">
+        <a href="index.html#work" class="link-arrow">← All projects</a>
+        <a href="project3.html" class="link-arrow">Roadie 2.0 →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Julia Rosner-Uddin. Designed & built with care.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
