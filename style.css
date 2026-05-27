@@ -70,21 +70,33 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 250, 248, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--grey-light);
+  background: var(--green);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
   height: 60px;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+nav.nav--scrolled {
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: var(--grey-light);
 }
 
 .nav-name {
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.02em;
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+nav.nav--scrolled .nav-name {
+  color: var(--black);
 }
 
 nav ul {
@@ -95,11 +107,19 @@ nav ul {
 
 nav ul a {
   font-size: 14px;
-  color: var(--grey-text);
-  transition: color 0.2s;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s;
 }
 
 nav ul a:hover {
+  color: var(--white);
+}
+
+nav.nav--scrolled ul a {
+  color: var(--grey-text);
+}
+
+nav.nav--scrolled ul a:hover {
   color: var(--black);
 }
 
@@ -108,7 +128,7 @@ nav ul a:hover {
 =========================== */
 
 .hero {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 200px);
   display: flex;
   align-items: center;
   padding: 80px 40px;
@@ -117,9 +137,8 @@ nav ul a:hover {
 }
 
 .hero-inner {
-  max-width: var(--max-width);
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
 }
 
 .hero-label {
@@ -130,24 +149,36 @@ nav ul a:hover {
   margin-bottom: 24px;
 }
 
-.hero h1 {
-  font-family: var(--font-serif);
-  font-size: clamp(44px, 6vw, 80px);
-  font-weight: 400;
-  line-height: 1.1;
+.hero-h1-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
   margin-bottom: 28px;
 }
 
-.hero h1 em {
-  font-family: var(--font-sans);
-  font-style: normal;
+.hero-star {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 600;
+  line-height: 1.1;
+  color: #ABDAFC;
+  text-align: center;
 }
 
 .hero-sub {
-  font-size: 18px;
-  max-width: 50ch;
+  font-family: var(--font-serif);
+  font-size: 24px;
   margin-bottom: 28px;
   line-height: 1.7;
+  text-align: center;
 }
 
 .hero-companies {
@@ -512,6 +543,23 @@ footer {
   .hero,
   .section {
     padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+
+  .hero-sub {
+    font-size: 18px;
+  }
+
+  .hero-h1-wrap {
+    gap: 16px;
+  }
+
+  .hero-star {
+    width: 28px;
+    height: 28px;
   }
 
   .project-grid {
