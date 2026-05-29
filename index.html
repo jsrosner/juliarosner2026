@@ -12,33 +12,41 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <span class="nav-name">Julia Rosner-Uddin</span>
-    <ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <p class="hero-sub">Julia • Product designer</p>
+      <!-- Arc text: curves up at centre -->
+      <svg class="hero-arc-text" viewBox="0 0 700 68" xmlns="http://www.w3.org/2000/svg" aria-label="Julia • Product designer" role="img">
+        <defs><path id="arc-up" d="M 0 100 Q 350 -100 700 100" fill="none"/></defs>
+        <text font-family="Rowan, Georgia, serif" font-size="26" fill="white" text-anchor="middle">
+          <textPath href="#arc-up" startOffset="50%">Product designer</textPath>
+        </text>
+      </svg>
+
       <div class="hero-h1-wrap">
         <svg class="hero-star" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M28.6863 1.26625C29.3522 -0.422037 31.7416 -0.422032 32.4074 1.26626L37.614 14.4677C39.2403 18.5913 42.5044 21.8554 46.628 23.4817L59.8294 28.6883C61.5177 29.3542 61.5177 31.7435 59.8294 32.4094L46.628 37.6159C42.5044 39.2423 39.2403 42.5064 37.614 46.6299L32.4074 59.8314C31.7416 61.5197 29.3522 61.5197 28.6863 59.8314L23.4798 46.6299C21.8535 42.5064 18.5894 39.2423 14.4658 37.6159L1.2643 32.4094C-0.42399 31.7435 -0.423984 29.3542 1.26431 28.6883L14.4658 23.4817C18.5894 21.8554 21.8535 18.5913 23.4798 14.4677L28.6863 1.26625Z" fill="#EDB422"/></svg>
-        <h1>Solving problems<br> and making way for growth.</h1>
+        <h1>Building for <br>growth, scale <br>and joy</h1>
         <svg class="hero-star" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M28.6863 1.26625C29.3522 -0.422037 31.7416 -0.422032 32.4074 1.26626L37.614 14.4677C39.2403 18.5913 42.5044 21.8554 46.628 23.4817L59.8294 28.6883C61.5177 29.3542 61.5177 31.7435 59.8294 32.4094L46.628 37.6159C42.5044 39.2423 39.2403 42.5064 37.614 46.6299L32.4074 59.8314C31.7416 61.5197 29.3522 61.5197 28.6863 59.8314L23.4798 46.6299C21.8535 42.5064 18.5894 39.2423 14.4658 37.6159L1.2643 32.4094C-0.42399 31.7435 -0.423984 29.3542 1.26431 28.6883L14.4658 23.4817C18.5894 21.8554 21.8535 18.5913 23.4798 14.4677L28.6863 1.26625Z" fill="#EDB422"/></svg>
       </div>
-      <p class="hero-sub">San Francisco</p>
-     
+
+      <!-- Arc text: curves down at centre -->
+      <svg class="hero-arc-text" viewBox="0 0 700 68" xmlns="http://www.w3.org/2000/svg" aria-label="San Francisco" role="img">
+        <defs><path id="arc-down" d="M 0 0 Q 350 100 700 0" fill="none"/></defs>
+        <text font-family="Rowan, Georgia, serif" font-size="26" fill="white" text-anchor="middle">
+          <textPath href="#arc-down" startOffset="50%">San Francisco</textPath>
+        </text>
+      </svg>
+    </div>
+
   </section>
 
   <!-- WORK -->
-  <section id="work" class="section">
-    <div class="container">
-      <h2 class="section-title">Selected work</h2>
+  <section id="work" class="section container">
+    <div class="text-container">
+      <h2>I'm Julia 👋</h2>
+      <p class="intro-lead p-lg">A generalist designer with 6+ years experience across web and mobile apps, most recently at Warner Music Group.</p>
+      <p class="intro-body p-base">I am dedicated to driving strategic alignment, using data analysis to steer design decisions and guarantee they result in measurable user and business success.</p>
+      </div>
 
       <!-- Project 1 — New Onboarding Flow -->
       <div class="project project--large card cs-header--purple">
@@ -48,7 +56,7 @@
         <div class="project-info">
           <span class="tag">Mobile · iOS · Activation</span>
           <h3>New Onboarding Flow</h3>
-          <p>A major end-to-end redesign of the onboarding experience for a concert discovery app with 460K MAUs. By re-sequencing, shortening, and contextualising core activation steps, we doubled day 7 retention and drove a 16% uplift in high-value actions in the first session.</p>
+          <p  class="p-sm">A major end-to-end redesign of the onboarding experience for a concert discovery app with 460K MAUs. By re-sequencing, shortening, and contextualising core activation steps, we doubled day 7 retention and drove a 16% uplift in high-value actions in the first session.</p>
           <a href="project1.html" class="link-arrow">View case study →</a>
         </div>
       </div>
@@ -60,7 +68,7 @@
             <div class="project-info">
               <span class="tag">Mobile · Engagement</span>
               <h4>Attendance Optimization</h4>
-              <p>Achieving a near-100% metric gain — without building new features.</p>
+              <p class="p-sm">Achieving a near-100% metric gain — without building new features.</p>
               <a href="project2.html" class="link-arrow">View →</a>
             </div>
             <div class="card-image">
@@ -75,7 +83,7 @@
             <div class="project-info">
               <span class="tag">Design Systems</span>
               <h4>Roadie 2.0 Design System</h4>
-              <p>Initiating a cross-functional, cross-platform design system effort.</p>
+              <p class="p-sm">Initiating a cross-functional, cross-platform design system effort.</p>
               <a href="project3.html" class="link-arrow">View →</a>
             </div>
         </div>
@@ -84,11 +92,22 @@
             <div class="project-info">
               <span class="tag">Web · Conversion</span>
               <h4>Two Custom Checkout Flows</h4>
-              <p>Architecting the purchase path experience for two iconic London venues.</p>
+              <p class="p-sm">Architecting the purchase path experience for two iconic London venues.</p>
               <a href="project4.html" class="link-arrow">View →</a>
             </div>
             <div class="card-image">
               <img src="images/card_purchase-path.png" alt="Two Custom Checkout Flows" onerror="this.style.display='none'" />
+          </div>
+        </div>
+        <!-- Full-width card -->
+        <div class="card card--wide cs-header--sage">
+          <div class="project-info">
+            <span class="tag">Just for fun</span>
+            <h3>Vibecoding a weekend bucket list app</h3>
+            <p class="p-sm">Designing and building a web app from scratch, helping to plan out weekend adventures. Currently in progress.</p>
+          </div>
+          <div class="card-image">
+            <img src="images/card_bucketlist.png" alt="Weekend Bucket List App" onerror="this.style.display='none'" />
           </div>
         </div>
       </div>
@@ -98,48 +117,58 @@
   <!-- ABOUT -->
   <section id="about" class="section section--alt">
     <div class="container about-grid">
-      <div class="about-image">
-        <img src="images/photo.jpg" alt="Julia Rosner-Uddin" onerror="this.style.display='none'" />
-        <div class="about-placeholder"><span>Your photo here</span></div>
+      <svg class="about-star-deco" width="34" height="34" viewBox="0 0 62 62" fill="none" aria-hidden="true"><path d="M28.6863 1.26625C29.3522 -0.422037 31.7416 -0.422032 32.4074 1.26626L37.614 14.4677C39.2403 18.5913 42.5044 21.8554 46.628 23.4817L59.8294 28.6883C61.5177 29.3542 61.5177 31.7435 59.8294 32.4094L46.628 37.6159C42.5044 39.2423 39.2403 42.5064 37.614 46.6299L32.4074 59.8314C31.7416 61.5197 29.3522 61.5197 28.6863 59.8314L23.4798 46.6299C21.8535 42.5064 18.5894 39.2423 14.4658 37.6159L1.2643 32.4094C-0.42399 31.7435 -0.423984 29.3542 1.26431 28.6883L14.4658 23.4817C18.5894 21.8554 21.8535 18.5913 23.4798 14.4677L28.6863 1.26625Z" fill="#EDB422"/></svg>
+      <div class="about-carousel">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="images/about-1.jpg" alt="Julia Rosner-Uddin" onerror="this.style.display='none'" />
+          </div>
+          <div class="carousel-slide">
+            <img src="images/about-2.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div class="carousel-slide">
+            <img src="images/about-3.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div class="carousel-slide">
+            <img src="images/about-4.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Previous image">&#8592;</button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Next image">&#8594;</button>
+        <div class="carousel-dots">
+          <button class="carousel-dot carousel-dot--active" aria-label="Image 1"></button>
+          <button class="carousel-dot" aria-label="Image 2"></button>
+          <button class="carousel-dot" aria-label="Image 3"></button>
+          <button class="carousel-dot" aria-label="Image 4"></button>
+        </div>
       </div>
       <div class="about-text">
-        <h2>About me</h2>
-        <p>I'm Julia, an SF-based product designer with 6+ years of experience across web and mobile apps. I've most recently worked at <strong>Warner Music Group</strong>.</p>
-        <p>I'm dedicated to driving strategic alignment, using data analysis to steer design decisions and guarantee they result in measurable user and business success.</p>
-        <p>I thrive on collaboration, working through ambiguity and helping move teams forward — translating core problems into crisp, compelling solutions, and using impeccable craft and storytelling to bring stakeholders and engineers on board.</p>
-        <p>When I'm not in front of a screen, I'm usually doing something crafty or enjoying live music. I love the arts in all its forms.</p>
-        <div class="skills">
-          <span class="skill-tag">UX Research</span>
-          <span class="skill-tag">Product Strategy</span>
-          <span class="skill-tag">Interaction Design</span>
-          <span class="skill-tag">Design Systems</span>
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Prototyping</span>
-          <span class="skill-tag">User Testing</span>
-          <span class="skill-tag">Data Analysis</span>
-          <span class="skill-tag">Workshop Facilitation</span>
-        </div>
+        <h2>A creative at heart, with a curiosity and passion for making things.</h2>
+        <p class="p-base">
+          Most of my career has been spent designing customer-facing apps and websites in the arts and music space, combined with some back-office tooling and workflow systems work. 
+        </p>
+        <p class="p-sm">
+          I also have a background in design systems and data-led growth work, initiating and running growth experiments. I’ve learned that speed, good craft, and accessibility don't have to fight each other—when you get them all working together, both user and business wins.
+        </p>
+        <p class="p-sm">I don’t shy away from ambiguity or complexity, and am a big believer in working openly and cross-functionally (especially in today’s AI landscape). Having long had an interest in front-end coding, I’ve embraced tools like Cursor and Claude to help me iterate and experiment faster.
+</p>
+        <p class="p-sm">Outside of work I’m a maker of many things, from clothing, to furniture, to jewelry. I only moved to San Francisco last year, so when I'm not learning a new craft, I'm usually out exploring all that the area has to offer.
+</p><br>
         <a href="images/julia-rosner-cv.pdf" class="btn btn--outline" download>Download CV</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container contact-inner">
-      <h2>Let's talk</h2>
-      <p>Whether you have a project in mind or just want to connect — I'd love to hear from you.</p>
-      <a href="mailto:julia.s.rosner@gmail.com" class="btn">julia.s.rosner@gmail.com</a>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/juliarosner" target="_blank">LinkedIn</a>
-        <a href="https://read.cv/juliarosner" target="_blank">Read.cv</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Julia Rosner-Uddin. Designed & built with care.</p>
+    <div class="footer-inner">
+      <span>© 2026 Julia Rosner-Uddin</span>
+      <div class="footer-links">
+        <a href="mailto:julia.s.rosner@gmail.com">julia.s.rosner@gmail.com</a>
+        <a href="https://linkedin.com/in/juliarosner" target="_blank">LinkedIn</a>
+        <a href="images/julia-rosner-cv.pdf" download>Download CV</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
