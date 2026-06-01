@@ -12,6 +12,20 @@
 </head>
 <body class="theme-sage">
 
+  <!-- PASSWORD GATE -->
+  <div id="pw-gate">
+    <div class="pw-modal">
+      <span class="tag">Protected work</span>
+      <h2>Enter password to continue</h2>
+      <p class="pw-subtitle">This case study is password protected.</p>
+      <div class="pw-form">
+        <input class="pw-input" type="password" id="pw-input" placeholder="Password" autocomplete="off" />
+        <button id="pw-submit" class="btn">Enter</button>
+      </div>
+      <p class="pw-error" id="pw-error">Incorrect password. Try again.</p>
+    </div>
+  </div>
+
   <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-name">Julia Rosner-Uddin</a>
@@ -127,14 +141,19 @@
         <p>I came away from the weekend more confident in my ability to move between design and code fluidly — and more convinced that designers who can build are going to be increasingly valuable as AI continues to compress development timelines.</p>
       </section>
 
-      <!-- PROJECT NAV -->
-      <div class="cs-nav-projects">
-        <a href="project4.html" class="link-arrow">← Two Custom Checkout Flows</a>
-        <a href="index.html#work" class="link-arrow">All projects →</a>
-      </div>
-
     </div>
   </main>
+
+  <!-- PROJECT NAV -->
+  <div class="cs-nav-projects">
+    <a href="project4.html" class="cs-nav-card cs-header--orange">
+      <span class="cs-nav-dir">← Previous</span>
+      <span class="cs-nav-title">Two Custom Checkout Flows</span>
+    </a>
+    <a href="index.html#work" class="cs-nav-card cs-nav-card--right cs-nav-card--neutral">
+      <span class="cs-nav-dir">All projects →</span>
+    </a>
+  </div>
 
   <!-- FOOTER -->
   <footer>

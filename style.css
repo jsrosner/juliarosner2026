@@ -115,13 +115,12 @@ nav {
   top: 0;
   z-index: 100;
   background: transparent;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
   height: 60px;
-  transition: background 0.3s, border-color 0.3s;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s ease;
 }
 
 /* Per-theme initial nav background — matches hero */
@@ -134,7 +133,11 @@ body.theme-sage    nav { background: #D1DCA8; }
 /* Scrolled — transparent, dark text */
 nav.nav--scrolled {
   background: transparent;
-  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Hidden — slides up off screen (case study pages, scroll down) */
+nav.nav--hidden {
+  transform: translateY(-110%);
 }
 
 .nav-name {
@@ -153,7 +156,8 @@ nav ul {
 
 nav ul a {
   font-size: 14px;
-  color: var(--grey-text);
+  color: var(--black);
+  opacity: .7;
   transition: color 0.3s;
 }
 
@@ -172,6 +176,8 @@ nav ul a:hover {
   padding: 80px 40px;
   background: var(--green);
   color: var(--white);
+  margin: 12px;
+  border-radius: var(--radius);
 }
 
 .hero-inner {
@@ -279,9 +285,7 @@ nav ul a:hover {
   padding: 100px 40px;
 }
 
-.section--alt {
-  background: #efefef;
-}
+
 
 .container {
   max-width: var(--max-width);
@@ -294,36 +298,8 @@ nav ul a:hover {
 }
 
 /* ===========================
-   PROJECTS — LARGE
+   PROJECT INFO
 =========================== */
-
-.project {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.project-image {
-  overflow: hidden;
-  position: relative;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.project--large:hover img {
-  transform: scale(1.03);
-}
-
-.card:hover .card-image img {
-  transform: scale(1.05);
-}
-
 
 .project-info .tag {
   display: inline-block;
@@ -344,23 +320,61 @@ nav ul a:hover {
 }
 
 /* ===========================
-   PROJECT GRID (small cards)
+   PROJECT GRID
 =========================== */
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
+  margin-top: 40px;
 }
 
+/* First card: full-width banner with side-by-side layout */
+.card--first {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 360px;
+}
+
+.card--first .project-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cs-header--purple .card-image img {
+  object-position: right;
+}
+
+.cs-header--blue .card-image img {
+  object-position: top;
+}
+
+.cs-header--orange .card-image img {
+  object-position: top;
+}
+
+.cs-header--yellow .card-image img {
+  object-position: bottom;
+}
+
+.cs-header--sage .card-image img {
+  object-position: top;
+}
+
+/* Last card: full-width banner with side-by-side layout */
 .card--wide {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-height: 300px;
 }
 
 .card--wide .project-info {
-  padding: 36px 40px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -375,7 +389,8 @@ nav ul a:hover {
   border-radius: var(--radius);
   overflow: hidden;
   transition: box-shadow 0.2s, transform 0.4s;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -383,9 +398,20 @@ nav ul a:hover {
   box-shadow: 0 12px 40px rgba(0,0,0,0.08);
 }
 
-.project-info {
-  padding: 20px 20px;
+/* Restore side-by-side grid layout for banner cards — must come after .card to win the cascade */
+.card--first,
+.card--wide {
+  display: grid;
+}
 
+.card-image {
+  flex: 1;
+  min-height: 80px;
+}
+
+.project-info {
+  padding: 20px;
+  flex-shrink: 0;
 }
 
 /* Stretch the link to cover the entire card */
@@ -397,6 +423,7 @@ nav ul a:hover {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 1;
 }
 
 .card-image img {
@@ -558,10 +585,12 @@ nav ul a:hover {
 =========================== */
 
 footer {
-  background: var(--green);
-  color: rgba(255, 255, 255, 0.7);
+  background: var(--grey-light);
+  color: var(--grey-text);
   padding: 28px 40px;
   font-size: 13px;
+  margin: 12px;
+  border-radius: var(--radius);
 }
 
 .footer-inner {
@@ -581,12 +610,12 @@ footer {
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--grey-text);
   transition: color 0.2s;
 }
 
 .footer-links a:hover {
-  color: var(--white);
+  color: var(--black);
 }
 
 /* ===========================
@@ -594,14 +623,18 @@ footer {
 =========================== */
 
 @media (max-width: 900px) {
-  .project {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    margin-bottom: 64px;
-  }
-
   .project-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    max-height: 500px;
+  }
+
+  /* Wide cards revert to a normal 1-col cell in the 2×2 */
+  .card--wide {
+    grid-column: auto;
+    display: block;
   }
 
   .about-grid {
@@ -618,14 +651,23 @@ footer {
     max-width: 400px;
   }
 
-    .text-container {
-  max-width: 100%;
-}
+  .text-container {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
   nav {
     padding: 0 20px;
+  }
+
+  footer {
+    margin: 0 8px 8px;
+  }
+
+  .hero {
+    margin: 8px;
+    border-radius: 8px;
   }
 
   nav ul {
@@ -658,5 +700,12 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  /* Stack first card vertically at small sizes */
+  .card--first {
+    display: flex;
+  }
 
+  .card--first .card-image img {
+    object-position: bottom;
+  }
 }
