@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>New Onboarding Flow — Julia Rosner-Uddin</title>
+  <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="case-study.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,7 +13,7 @@
 </head>
 <body class="theme-purple">
 
-  <!-- PASSWORD GATE -->
+  <!-- PASSWORD GATE (disabled)
   <div id="pw-gate">
     <div class="pw-modal">
       <span class="tag">Protected work</span>
@@ -25,6 +26,7 @@
       <p class="pw-error" id="pw-error">Incorrect password. Try again.</p>
     </div>
   </div>
+  -->
 
   <!-- NAV -->
   <nav>
@@ -32,7 +34,6 @@
     <ul>
       <li><a href="index.html#work">Work</a></li>
       <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -41,7 +42,7 @@
 
     <!-- HERO IMAGE -->
     <div class="cs-hero-image">
-      <img src="images/onboarding_hero.png" alt="New Onboarding Flow hero" onerror="this.style.display='none'" />
+      <img src="images/onboarding_hero.png" alt="" onerror="this.style.display='none'" />
     </div>
 
     <!-- CASE STUDY HEADER -->
@@ -50,7 +51,7 @@
         <a href="index.html" class="cs-back">← Back to work</a>
         <span class="tag">Mobile · Activation</span>
         <h1>New Onboarding Flow</h1>
-        <p class="cs-subtitle">A major redesign which doubled day 7 retention by re-sequencing and properly contextualising the core activation steps of Songkick, a concert discovery app with 460K MAUs.</p>
+        <p class="cs-subtitle">A major redesign which doubled day 7 retention by re-sequencing and properly contextualizing the core activation steps of Songkick, a concert discovery app with 460K MAUs.</p>
         <div class="cs-meta">
           <div class="cs-meta-item">
             <span class="cs-meta-label">Timeline</span>
@@ -81,10 +82,10 @@
       <!-- CONTEXT -->
       <section class="cs-section">
         <h2>Context</h2>
-        <p>Songkick is a concert discovery app with 460K monthly active users, helping people track their favourite artists and get notified about live shows in their area. The product has long had strong acquisition (particularly via its website), but poor retention.</p>
+        <p>Songkick is a concert discovery app with 460K monthly active users, helping people track their favorite artists and get notified about live shows in their area. The product has long had strong acquisition (particularly via its website), but poor retention.</p>
         <div class="cs-note-row">
           <p>
-            At the time we were considering this project, one of our overarching company KRs was to increase logged in MAUs by 15%. For onboarding, this means that new users should have a high quality, high value first time experience while also fulfilling as many <span class="highlight">activation criteria</span> as possible to maximize the likelihood of repeat, valuable experiences in the app.
+            At the time when we were considering this project, one of our overarching company KRs was to increase logged in MAUs by 15%. For onboarding, this meant that new users should have a high quality, high value first time experience while also fulfilling as many <span class="highlight">activation criteria</span> as possible to maximize the likelihood of repeat, valuable experiences in the app.
           </p>
           <div class="sticky-note">
             <h4>Activation criteria</h4>
@@ -100,23 +101,23 @@
 
             <!-- FULL-WIDTH IMAGE -->
       <div class="cs-image-full">
-        <img src="images/onboarding_core-problem.png" alt="Songkick onboarding overview" onerror="this.style.display='none'" />
-        <p class="cs-caption">The original onboarding flow was lengthy and overly complex, leading to significant dropoff at various steps</p>
+        <img src="images/onboarding_core-problem.png" alt="Flow diagram of the original Songkick onboarding flow showing a lengthy multi-step process with significant drop-off" onerror="this.style.display='none'" />
+        <p class="cs-caption">The original onboarding flow was lengthy and overly complex, leading to significant dropoff at various steps.</p>
       </div>
 
       <!-- RESEARCH -->
       <section class="cs-section">
         <h2>Initial research</h2>
-        <p>Knowing that onboarding could be a suitable lever to move our target metric, I worked with a PM to carry out an initial research phase. Our goal here was not only to get a better picture of our baseline, but also to use this to build stakeholder confidence and secure roadmap prioritization.</p>
+        <p>Knowing that onboarding could be a suitable lever for our target metric, I worked with my PM to carry out initial research. Our goal here was not only to get a better picture of our baseline, but also to use this to build stakeholder confidence and secure roadmap prioritization.</p>
         <p>
-          Data analysis showed that 40% new users were not completing sign up. Of those that did, many were landing in an un-personalised experience in the app with only 1/3 of users taking high-value action (clicking a ticket link or marking Interested/Going on an event) post-onboarding.
+          Data analysis showed that 40% new users were not completing sign up. Of those that did, many were landing in an unpersonalized experience in the app with only 1/3 of users taking high-value action (clicking a ticket link or marking Interested/Going on an event) post-onboarding.
         </p>
-        <p>To us, this signalled that onboarding suffered not only from poor UI (due to having been neglected for a number of years) but was actually a significant bottleneck in which users were not having an aha moment—leaving little to no motiviation to return to the app.</p>
+        <p>To us, this signaled that onboarding suffered not only from poor UI but was actually a significant bottleneck in which users were not having an aha moment—leaving little to no motivation to return to the app.</p>
       </section>
 
        <!-- FULL-WIDTH IMAGE -->
       <div class="cs-image-full">
-        <img src="images/onboarding-initial-research.png" alt="Initial research" onerror="this.style.display='none'" />
+        <img src="images/onboarding-initial-research.png" alt="Graphs showing key onboarding metrics including sign-up completion rate and artist tracking rate." onerror="this.style.display='none'" />
         <p class="cs-caption">A snapshot of some of the metrics we investigated.</p>
       </div>
 
@@ -128,20 +129,20 @@
 
       <!-- FULL-WIDTH IMAGE -->
       <div class="cs-image-full">
-        <img src="images/onboarding_process.jpg" alt="Initial research" onerror="this.style.display='none'" />
+        <img src="images/onboarding_process.jpg" alt="Figma screenshot of a number of How Might We sticky notes, as well as some early user flow ideations." onerror="this.style.display='none'" />
         <p class="cs-caption">Early work mapping out ideas.</p>
       </div>
 
       <!-- Strategic tradeoff -->
       <section class="cs-section">
         <h2>Making strategic tradeoffs</h2>
-        <p>I came up with low-fi designs for each of the three proposed routes, visualizing what each user journey would look like. In the end, we went with a route which proposed optimizing the existing steps first, rather than shortening the onboarding flow more radically (e.g., by deferring steps like the Notification permisison prompt to appear contextually in the app, rather than as a discreet step in onboarding.)</p>
+        <p>I came up with low-fi designs for each of the three proposed routes, visualizing what each user journey would look like. In the end, we went with a route which proposed optimizing the existing steps first, rather than shortening the onboarding flow more radically (by deferring steps like, for example, the notification permission prompt to appear contextually in the app, rather than as a discrete step in onboarding.)</p>
         <p>This decision allowed us to deliver an immediate, measurable uplift, establishing a solid foundation from which we could launch more radical, data-driven experiments in the future.</p>
       </section>
 
             <!-- FULL-WIDTH IMAGE -->
       <div class="cs-image-full">
-        <img src="images/onboarding_three-routes.jpg" alt="Three routes" onerror="this.style.display='none'" />
+        <img src="images/onboarding_three-routes.jpg" alt="Low-fidelity designs comparing three proposed onboarding flow directions" onerror="this.style.display='none'" />
         <p class="cs-caption">Low-fi designs of the three proposed routes which I brought to my product trio to discuss.</p>
       </div>
 
@@ -157,15 +158,15 @@
         <h2>Validating the new designs</h2>
         <p>Since the onboarding flow would need to be replaced end-to-end—representing significant product risk—I used my prototypes to run an unmoderated Maze study to help validate the new design. From this I learned that:</p>
         <ul class="cs-list">
-          <li>Marketing carousel had low engagement but positive sentiment</li>
-          <li>'Get notified' CTA was effective; notification prompt placement felt natural</li>
-          <li>Initial mixed feedback on location prompt — resolved by improving flow contextualisation</li>
-          <li>Overall flow rated as easy and fast, with one user commenting: <i>"Very quick, not an issue... I quite enjoyed it, actually."</i></li>
+          <li>The marketing carousel had low engagement but positive sentiment</li>
+          <li>The 'Get notified' CTA was effective; the notification prompt placement felt natural</li>
+          <li>There was some initial mixed feedback on the location prompt—which I later resolved by improving flow contextualization</li>
+          <li>The overall flow was rated as easy and fast, with one user commenting: <i>"Very quick, not an issue... I quite enjoyed it, actually."</i></li>
         </ul>
       </section>
 
       <div class="cs-image-full">
-        <img src="images/onboarding_research.png" alt="Hypothesis framing" onerror="this.style.display='none'" />
+        <img src="images/onboarding_research.png" alt="Screenshot of one of the recorded user testing sessions." onerror="this.style.display='none'" />
         <p class="cs-caption">Unmoderated testing via Maze. </p>
       </div>
 
@@ -173,43 +174,43 @@
       <section class="cs-section">
         <h2>Three key before & afters</h2>
         <h3>1. Addressing redundancy</h3>
-        <p>On iOS, the existing flow asked users to complete a local library scan before signing up—a largely obsolete step, since very few people still store music locally. This created three problems: an unclear CTA ('Find my favourite artists'), an intrusive permissions request before any value had been demonstrated, and confusing sequencing where sign-up CTAs appeared after the library scan.</p>
+        <p>On iOS, the existing flow asked users to complete a local library scan before signing up—a largely obsolete step, since very few people still store music locally. This created three problems: an unclear CTA ('Find my favorite artists'), an intrusive permissions request before any value had been demonstrated, and confusing sequencing where sign-up CTAs appeared after the library scan.</p>
         <p>I proposed consolidating the entry point into a single, high-efficiency screen: a marketing carousel to communicate Songkick's value, with all authentication options contained within two clear bottom sheets. This eliminated two steps from the journey, reducing cognitive load and directly contributing to the 7pp uplift in completion.</p>
       </section>
 
       <div class="cs-image-full">
-        <img src="images/onboarding_redundancy.png" alt="Entry point consolidation" onerror="this.style.display='none'" />
+        <img src="images/onboarding_redundancy.png" alt="Before and After of the welcome screens showing consolidation of redundant sign-up entry points" onerror="this.style.display='none'" />
       </div>
 
 
 
       <!-- CONTEXTUALISING PERMISSIONS -->
       <section class="cs-section">
-        <h3>2. Contextualising permissions</h3>
-        <p>Previously, notifications were presented on a standalone screen—essentially demanding permissions before demonstrating personalisation. Location was also asked on its own screen, compounding the perception that onboarding was lengthy and cumbersome.</p>
+        <h3>2. Contextualizing permissions</h3>
+        <p>Previously, notifications were presented on a standalone screen—essentially demanding permissions before demonstrating personalization. Location permissions were also prompted on their own screen, compounding the perception that onboarding was lengthy and cumbersome.</p>
         <p>In the new flow, notifications are prompted on the artist tracking success screen ("You're tracking 105 artists! Get notified when they play near you"), giving the request immediate relevance. Location is deferred to the app landing page, giving users a sense of near-completion before asking for the final permission.</p>
       </section>
 
       <!-- FULL-WIDTH IMAGE -->
       <div class="cs-image-full">
-        <img src="images/onboarding_permissions.png" alt="Permission contextualisation" onerror="this.style.display='none'" />
+        <img src="images/onboarding_permissions.png" alt="Before and After of the permission prompts with added contextualization." onerror="this.style.display='none'" />
       </div>
 
       <!-- IMPROVING MANUAL TRACKING -->
       <section class="cs-section">
         <h3>3. Improving manual tracking</h3>
-        <p>The number of artists tracked is a core metric for Songkick—it directly drives personalised content and increases the value of re-engagement channels. For users who don't complete the automatic taste import via Spotify or Apple Music, we identified high friction in the manual tracking flow: users would often track only very few artists, if any at all.</p>
+        <p>The number of artists tracked is a core metric for Songkick—it directly drives personalized content and increases the value of re-engagement channels. For users who don't complete the automatic taste import via Spotify or Apple Music, we identified high friction in the manual tracking flow: users would often track only very few artists, if any at all.</p>
         <p>The solution was to redesign the flow from a static, stale list to an efficient and fun activation tool. It now features a search function and incorporates a familiar recommendation pattern—suggesting 4 new artists for every artist tracked. This pattern, consistent with platforms like Spotify and Deezer, significantly lowers the effort barrier for new users.</p>
       </section>
 
       <div class="cs-image-full">
-        <img src="images/onboarding_manual-tracking.png" alt="Permission contextualisation" onerror="this.style.display='none'" />
+        <img src="images/onboarding_manual-tracking.png" alt="Before and After of the manual artist tracking flow showing the redesigned search and selection experience." onerror="this.style.display='none'" />
       </div>
       
       <!-- OUTCOMES -->
       <section class="cs-section">
         <h2>Outcomes & reflection</h2>
-        <p>The new onboarding flow is faster and easier for users to complete, taking around 10 seconds less than before. Higher engagement with key actions in the app (marking attendance, clicking a ticket link) post-onboarding, as well as the increase in day 7 retention, points to the fact that value is better communicated in the new onboarding screens, leaving users ready to explore the app.
+        <p>The new onboarding flow is faster and easier for users to complete, taking around 10 seconds less than before. Higher engagement with key actions in the app (marking attendance, clicking a ticket link) post-onboarding, as well as the increase in day 7 retention, points to the fact that value is better communicated in the new onboarding screens.
         </p>
         <p>
           There’s still a case to be made for deferring some of these onboarding steps to happen contextually in the app. Presumably, while such an approach would initially decrease the rate of activation in new users, it could later drive a stickier experience in which users are able to experience Songkick’s core benefits for themselves, following the principle of ‘show, don’t tell’. 
@@ -232,27 +233,27 @@
             <tr>
               <td>Day 7 retention (users active on day 7)</td>
               <td>6.27%</td>
-              <td>14.01% <span class="cs-badge cs-badge--up">↗124%</span></td>
+              <td>14.01% <span class="cs-badge cs-badge--positive">↗124%</span></td>
             </tr>
             <tr>
               <td>Install → Onboarding complete</td>
               <td>60%</td>
-              <td>67.06% <span class="cs-badge cs-badge--up">↗12%</span></td>
+              <td>67.06% <span class="cs-badge cs-badge--positive">↗12%</span></td>
             </tr>
             <tr>
               <td>Install → Attendance or ticket click</td>
               <td>26.8%</td>
-              <td>31.1% <span class="cs-badge cs-badge--up">↗16%</span></td>
+              <td>31.1% <span class="cs-badge cs-badge--positive">↗16%</span></td>
             </tr>
             <tr>
               <td>Average number of artists tracked</td>
               <td>5.48</td>
-              <td>12.99 <span class="cs-badge cs-badge--up">↗137%</span></td>
+              <td>12.99 <span class="cs-badge cs-badge--positive">↗137%</span></td>
             </tr>
             <tr>
               <td>Average time to complete onboarding</td>
               <td>1min 9sec</td>
-              <td>59sec <span class="cs-badge cs-badge--down">↘14%</span></td>
+              <td>59sec <span class="cs-badge cs-badge--positive">↘14%</span></td>
             </tr>
           </tbody>
         </table>
@@ -276,7 +277,14 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Julia Rosner-Uddin.</p>
+    <div class="footer-inner">
+      <span>© 2026 Julia Rosner-Uddin</span>
+      <div class="footer-links">
+        <a href="mailto:julia.s.rosner@gmail.com">julia.s.rosner@gmail.com</a>
+        <a href="https://linkedin.com/in/juliarosner" target="_blank">LinkedIn</a>
+        <a href="images/julia-rosner-cv.pdf" download>Download CV</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>

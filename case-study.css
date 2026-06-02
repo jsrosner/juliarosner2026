@@ -147,6 +147,7 @@
   font-size: 13px;
   color: var(--grey-text);
   background: var(--grey-light);
+    max-width: 100ch !important;
 }
 
 /* ===========================
@@ -254,6 +255,10 @@ header .cs-container {
   position: relative;
 }
 
+.cs-image-no-bg {
+  background: none !important;
+}
+
 .cs-image-full img {
   width: 120%;
   display: block;
@@ -299,14 +304,50 @@ header .cs-container {
    KPI TABLE
 =========================== */
 
-.cs-table-wrap {
+.cs-table-outer {
+  position: relative;
   margin-bottom: 72px;
+}
+
+.cs-table-outer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #FAFAF8);
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.cs-table-outer.is-scrolled-end::after {
+  opacity: 0;
+}
+
+.cs-table-outer--fade-bottom::after {
+  width: 100%;
+  height: 100px;
+  top: auto;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, #FAFAF8);
+  opacity: 1 !important;
+}
+
+.cs-table tbody tr.cs-row--faded td {
+  color: var(--grey-mid);
+}
+
+.cs-table-wrap {
   border: 1px solid var(--grey-mid);
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cs-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   font-size: 15px;
 }
@@ -348,15 +389,21 @@ header .cs-container {
   vertical-align: middle;
 }
 
-.cs-badge--up {
+.cs-badge--positive {
   background: #C3FF37;
   color: var(--black);
 }
 
-.cs-badge--down {
-  background: #C3FF37;
+.cs-badge--negative {
+  background: #F4A27A;
   color: var(--black);
 }
+
+.cs-badge--neutral {
+  background: #D0CEC9;
+  color: var(--black);
+}
+
 
 /* ===========================
    STATS
@@ -554,6 +601,41 @@ header .cs-container {
 }
 
 /* ===========================
+   IMAGE CAROUSEL
+=========================== */
+
+.cs-img-carousel {
+  position: relative;
+  margin-bottom: 72px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.cs-img-carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.cs-img-carousel-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+    background: var(--orange);
+}
+
+.cs-img-carousel-slide img {
+  width: 100%;
+  display: block;
+}
+
+.cs-img-carousel .carousel-btn {
+  top: 50%;
+}
+
+.cs-img-carousel .carousel-dots {
+  bottom: 12px; 
+}
+
+/* ===========================
    PASSWORD GATE
 =========================== */
 
@@ -627,12 +709,6 @@ header .cs-container {
    RESPONSIVE
 =========================== */
 
-@media (max-width: 600px) {
-  .cs-note-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
 
 @media (max-width: 900px) {
   .cs-hero-layout {
@@ -687,5 +763,25 @@ header .cs-container {
 
   .cs-three-col {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cs-note-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cs-section {
+    margin: 0;
+    margin-bottom: 72px;
+  }
+
+  .cs-nav-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-nav-card--right {
+    text-align: left;
   }
 }

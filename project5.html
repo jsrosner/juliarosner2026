@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vibecoding a Weekend Bucket List App — Julia Rosner-Uddin</title>
+  <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="case-study.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,7 +13,7 @@
 </head>
 <body class="theme-sage">
 
-  <!-- PASSWORD GATE -->
+  <!-- PASSWORD GATE (disabled)
   <div id="pw-gate">
     <div class="pw-modal">
       <span class="tag">Protected work</span>
@@ -25,6 +26,7 @@
       <p class="pw-error" id="pw-error">Incorrect password. Try again.</p>
     </div>
   </div>
+  -->
 
   <!-- NAV -->
   <nav>
@@ -32,7 +34,6 @@
     <ul>
       <li><a href="index.html#work">Work</a></li>
       <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -41,7 +42,7 @@
 
     <!-- HERO IMAGE -->
     <div class="cs-hero-image">
-      <img src="images/card_bucketlist.png" alt="Weekend Bucket List App hero" onerror="this.style.display='none'" />
+      <img src="images/card_bucketlist.png" alt="" onerror="this.style.display='none'" />
       <div class="cs-hero-placeholder"><span>Add your hero image here</span></div>
     </div>
 
@@ -82,12 +83,12 @@
       <!-- OVERVIEW -->
       <section class="cs-section">
         <h2>Overview</h2>
-        <p>I've always had a long list of things I want to do in San Francisco — hikes, hidden bars, neighbourhood restaurants, weekend trips. Most of them live in a Notes app, half-finished and never revisited. I decided to actually build the thing I wished existed: a personal bucket list app designed around how I actually plan my weekends.</p>
+        <p>I've always had a long list of things I want to do in San Francisco — hikes, hidden bars, neighborhood restaurants, weekend trips. Most of them live in a Notes app, half-finished and never revisited. I decided to actually build the thing I wished existed: a personal bucket list app designed around how I actually plan my weekends.</p>
         <p>The project was as much an experiment in process as in product. I used Cursor and Claude to accelerate development, handling the parts I'd normally spend the most time on — component wiring, API integration, deployment config — so I could focus on the design decisions that actually matter.</p>
       </section>
 
       <div class="cs-image-full">
-        <img src="images/bucketlist_overview.png" alt="Bucket list app overview" onerror="this.style.display='none'" />
+        <img src="images/bucketlist_overview.png" alt="Screenshots of the finished weekend bucket list web app interface" onerror="this.style.display='none'" />
         <div class="cs-image-placeholder"><span>App overview screenshot</span></div>
         <p class="cs-caption">The finished app — a personal bucket list tool built over a single weekend</p>
       </div>
@@ -103,11 +104,11 @@
       <div class="cs-three-col">
         <div class="cs-three-col-item">
           <h3>Speed over perfection</h3>
-          <p>The constraint was the point. One weekend forced ruthless prioritisation — only the features that would actually change how I use the app made the cut.</p>
+          <p>The constraint was the point. One weekend forced ruthless prioritization — only the features that would actually change how I use the app made the cut.</p>
         </div>
         <div class="cs-three-col-item">
           <h3>Design first, build second</h3>
-          <p>Even with AI assistance speeding up development, the design decisions still required human judgement. I spent the first morning on layout and visual language before touching code.</p>
+          <p>Even with AI assistance speeding up development, the design decisions still required human judgment. I spent the first morning on layout and visual language before touching code.</p>
         </div>
         <div class="cs-three-col-item">
           <h3>Ship something real</h3>
@@ -119,11 +120,11 @@
       <section class="cs-section">
         <h2>The process</h2>
         <p>I used Cursor as my IDE and leaned heavily on Claude for scaffolding boilerplate, debugging weird edge cases, and generating the more repetitive parts of the codebase. What surprised me was how much design thinking it required to direct the AI well — vague prompts produced vague output. The clearer my design intent, the better the code.</p>
-        <p>The experience crystallised something I'd suspected: AI-assisted development doesn't remove the need for design skill, it concentrates it. You spend less time on syntax and more time on decisions — which is a better use of a designer's time anyway.</p>
+        <p>The experience crystallized something I'd suspected: AI-assisted development doesn't remove the need for design skill, it concentrates it. You spend less time on syntax and more time on decisions — which is a better use of a designer's time anyway.</p>
       </section>
 
       <div class="cs-image-full">
-        <img src="images/bucketlist_process.png" alt="Design and development process" onerror="this.style.display='none'" />
+        <img src="images/bucketlist_process.png" alt="Cursor IDE and Claude interface showing AI-assisted development in action" onerror="this.style.display='none'" />
         <div class="cs-image-placeholder"><span>Process screenshot — Cursor + Claude in action</span></div>
         <p class="cs-caption">Using AI tooling to handle the scaffolding, while staying close to the design decisions that mattered</p>
       </div>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roadie 2.0 Design System — Julia Rosner-Uddin</title>
+  <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="case-study.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,7 +13,7 @@
 </head>
 <body class="theme-yellow">
 
-  <!-- PASSWORD GATE -->
+  <!-- PASSWORD GATE (disabled)
   <div id="pw-gate">
     <div class="pw-modal">
       <span class="tag">Protected work</span>
@@ -25,6 +26,7 @@
       <p class="pw-error" id="pw-error">Incorrect password. Try again.</p>
     </div>
   </div>
+  -->
 
   <!-- NAV -->
   <nav>
@@ -32,7 +34,6 @@
     <ul>
       <li><a href="index.html#work">Work</a></li>
       <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -41,7 +42,7 @@
 
     <!-- HERO IMAGE -->
     <div class="cs-hero-image">
-      <img src="images/roadie_hero.png" alt="Roadie 2.0 Design System" onerror="this.style.display='none'" />
+      <img src="images/roadie_hero.png" alt="" onerror="this.style.display='none'" />
     </div>
 
     <!-- CASE STUDY HEADER -->
@@ -50,7 +51,7 @@
         <a href="index.html" class="cs-back">← Back to work</a>
         <span class="tag">Design Systems</span>
         <h1>Roadie 2.0 Design System</h1>
-        <p class="cs-subtitle">Leading a cross-functional effort to scale and systematise—a unified component library across Figma, React Native, iOS, and Android codebases.</p>
+        <p class="cs-subtitle">Leading a cross-functional effort to scale and systematize—a unified component library across Figma, React Native, iOS, and Android codebases.</p>
         <div class="cs-meta">
           <div class="cs-meta-item">
             <span class="cs-meta-label">Role</span>
@@ -81,23 +82,23 @@
       <!-- OVERVIEW -->
       <section class="cs-section">
         <h2>Overview</h2>
-        <p>Songkick's existing design system, called Roadie, existed in Figma—but was rarely used. Engineers and designers were routinely rebuilding components and setting new styles from scratch rather than reusing from the library. This led to component divergence and friction that threatened delivery speed.</p>
-        <p>I initiated and led a cross-functional initiative to create a unified component library—Roadie 2.0—starting with comprehensive Figma and code audits, and working closely with engineering partners across three platforms.</p><br>
+        <p>Songkick's existing design system, called Roadie, had existed in Figma for a while, though it was rarely used. Engineers and designers were routinely rebuilding components and setting new styles from scratch rather than reusing from the library. This led to component divergence and friction that threatened delivery speed.</p>
+        <p>I initiated and led a cross-functional initiative to create a unified component library—Roadie 2.0—starting with comprehensive Figma and code audits, and working closely with engineering partners to systematize tokens across Native and React Native codebases.</p><br>
 
         <h3>Approach</h3>
            <p>I brought engineering partners on board early, starting a weekly cross-functional working group to ensure any efforts would be in line with both design and engineering goals.</p>
            <p>
-            Our first step was to conduct comprehensive Figma and code audits across React Native and Native (iOS/Android) codebases, with the goal to eventually have one design source in Figma, and three consistent code implementations.</p>
+            Our first step was to conduct comprehensive Figma and code audits across React Native and Native (iOS/Android) codebases, with the goal to eventually maintain one design source in Figma, and three consistent code implementations.</p>
       </section>
 
       <div class="cs-image-grid">
         <div class="cs-image-item">
-          <img src="images/roadie_core-problem.png" alt="Button cloud" onerror="this.style.display='none'" />
+          <img src="images/roadie_core-problem.png" alt="Audit showing dozens of inconsistent button variants across the codebase" onerror="this.style.display='none'" />
           <p class="cs-caption">Our initial audits found big inconsistencies in both design and code.</p>
         </div>
 
         <div class="cs-image-item">
-          <img src="images/roadie_approach.png" alt="Spreadsheet screenshot" onerror="this.style.display='none'" />
+          <img src="images/roadie_approach.png" alt="Spreadsheet tracking component audit progress across Figma, React Native, iOS, and Android" onerror="this.style.display='none'" />
           <p class="cs-caption">For speed and ease, we tracked our progress in a spreadsheet.</p>
         </div>
       </div>
@@ -105,28 +106,28 @@
       <!-- CROSS-PLATFORM PARITY -->
       <section class="cs-section">
         <h2>Cross-platform parity</h2>
-        <p>The central challenge was designing a unified system that served both the React Native team and the Native (iOS/Android) team—three distinct codebases with different technical constraints and conventions.</p>
-        <p>I established rigorous cross-functional governance to link a single design source in Figma to all three implementations. Platform-specific limitations relating to blur, stroke transparency, and modal behaviour were proactively addressed and documented as exceptions rather than workarounds, allowing us to maintain maximum platform parity without compromising component quality.</p>
+        <p>The central challenge was designing a unified system that served both the React Native team and the Native team—three distinct codebases with different technical constraints and conventions.</p>
+        <p>I established rigorous cross-functional governance to link a single design source in Figma to all three implementations. Platform-specific limitations relating to blur, stroke transparency, and modal behavior were proactively addressed and documented as exceptions rather than workarounds, allowing us to maintain maximum platform parity without compromising component quality.</p>
       </section>
 
      <div class="cs-image-full">
-        <img src="images/roadie_cross-platform-parity.png" alt="Colour token reskin" onerror="this.style.display='none'" />
+        <img src="images/roadie_cross-platform-parity.png" alt="Button components shown with consistent implementation across iOS, Android, and Designs." onerror="this.style.display='none'" />
       </div>
 
       <!-- ROADIE IN ACTION -->
       <section class="cs-section">
-        <h2>Roadie in action: leveraging colour tokens</h2>
-        <p>During the promotional window for a major artist's album release, the business asked for a full-app visual reskin to match the album's distinct pink colour palette. Previously, this would have required designers and engineers to manually update hundreds of individual instances one by one—days of work.</p>
-        <p>Leveraging the new design system, we were able to treat this as a simple theming exercise: only needing to change <strong>3 core colour tokens</strong> within our shared library. The change instantly and consistently propagated across hundreds of instances on both Android and iOS.</p>
+        <h2>Roadie in action: leveraging color tokens</h2>
+        <p>During the promotional window for a major artist's album release, the business asked for a visual reskin of the artist's superfan app to match the album's distinct pink color palette. Previously, this would have required designers and engineers to manually update hundreds of individual instances one by one—days of work.</p>
+        <p>Leveraging the new design system, we were able to treat this as a simple theming exercise: only needing to change <strong>3 core color tokens</strong> within our shared library. The change instantly and consistently propagated across hundreds of instances on both Android and iOS.</p>
         <p>
-          Whilst not a major feature by any means, this moment of delight was noticed and appreciated by our audience—as one user wrote: 
-          "Okay so, now I have every single button in pink on my iPad... and I just wanna say it's so cute 🥰🥰 App Gods, love that!"
+          While not a major feature by any means, this moment of delight was noticed and appreciated by our audience—as one user wrote: <i>"Okay so, now I have every single button in pink on my iPad... and I just wanna say it's so cute 🥰🥰 App Gods, love that!"</i>
+          
         </blockquote>
       </section>
 
       <!-- FULL-WIDTH IMAGE -->
       <div class="cs-image-full">
-        <img src="images/roadie_in-action.png" alt="Colour token reskin" onerror="this.style.display='none'" />
+        <img src="images/roadie_in-action.png" alt="Songkick app screens showing a full pink colour theme applied by changing just 3 design tokens" onerror="this.style.display='none'" />
         <p class="cs-caption">3 token changes → full-app reskin across iOS and Android, deployed in hours instead of days</p>
       </div>
 
@@ -137,16 +138,20 @@
           The new system is now up and running, and getting great feedback from the entire team:
         </p>
 
-        <p>
-          "The biggest area of improvement is we can quickly map the Figma to the code, so we don't need to look into the specific values for colour hex codes, opacity, etc." — iOS Lead
+        <p><i>"The biggest area of improvement is we can quickly map the Figma to the code, so we don't need to look into the specific values for color hex codes, opacity, etc."</i>
+           — iOS Lead
         </p>
 
-        <p>
-"I deleted a tonne of code because of the design system. It's been a game changer for us." — iOS Engineer
+        <p><i>
+"I deleted a ton of code because of the design system. It's been a game changer for us."
+        </i>
+ — iOS Engineer
         </p>
 
-        <p>
-          "Love the new design system. Not easy to design for two apps at the same time but it looks amazing and is super easy to use." — Android Lead
+        <p><i>"Love the new design system. Not easy to design for two apps at the same time but it looks amazing and is super easy to use."
+
+        </i>
+           — Android Lead
         </p>
 
 
@@ -187,7 +192,14 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Julia Rosner-Uddin.</p>
+    <div class="footer-inner">
+      <span>© 2026 Julia Rosner-Uddin</span>
+      <div class="footer-links">
+        <a href="mailto:julia.s.rosner@gmail.com">julia.s.rosner@gmail.com</a>
+        <a href="https://linkedin.com/in/juliarosner" target="_blank">LinkedIn</a>
+        <a href="images/julia-rosner-cv.pdf" download>Download CV</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>

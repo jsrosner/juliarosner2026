@@ -76,6 +76,36 @@ if (aboutCarousel) {
   dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
 }
 
+// Table scroll gradient — hide fade on outer wrapper when scrolled to end
+document.querySelectorAll('.cs-table-wrap').forEach(wrap => {
+  const outer = wrap.closest('.cs-table-outer');
+  const check = () => {
+    const atEnd = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 2;
+    if (outer) outer.classList.toggle('is-scrolled-end', atEnd);
+  };
+  wrap.addEventListener('scroll', check, { passive: true });
+  check();
+});
+
+// Case study image carousel
+const csImgCarousel = document.querySelector('.cs-img-carousel');
+if (csImgCarousel) {
+  const track = csImgCarousel.querySelector('.cs-img-carousel-track');
+  const dots = csImgCarousel.querySelectorAll('.carousel-dot');
+  const total = dots.length;
+  let current = 0;
+
+  function csGoTo(index) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('carousel-dot--active', i === current));
+  }
+
+  csImgCarousel.querySelector('.carousel-btn--prev').addEventListener('click', () => csGoTo(current - 1));
+  csImgCarousel.querySelector('.carousel-btn--next').addEventListener('click', () => csGoTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => csGoTo(i)));
+}
+
 // Smooth fade-in as you scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

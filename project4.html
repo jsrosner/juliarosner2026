@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Growth experiments — Julia Rosner-Uddin</title>
+  <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="case-study.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,7 +13,7 @@
 </head>
 <body class="theme-orange">
 
-  <!-- PASSWORD GATE -->
+  <!-- PASSWORD GATE (disabled)
   <div id="pw-gate">
     <div class="pw-modal">
       <span class="tag">Protected work</span>
@@ -25,6 +26,7 @@
       <p class="pw-error" id="pw-error">Incorrect password. Try again.</p>
     </div>
   </div>
+  -->
 
   <!-- NAV -->
   <nav>
@@ -32,7 +34,6 @@
     <ul>
       <li><a href="index.html#work">Work</a></li>
       <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -41,7 +42,7 @@
 
     <!-- HERO IMAGE -->
     <div class="cs-hero-image">
-      <img src="images/growth-experiments_hero.jpg" alt="Growth Experiments" onerror="this.style.display='none'" />
+      <img src="images/growth-experiments_hero.jpg" alt="" onerror="this.style.display='none'" />
     </div>
 
     <!-- CASE STUDY HEADER -->
@@ -78,126 +79,268 @@
   <main class="cs-body">
     <div class="cs-container cs-content">
 
-      <!-- OVERVIEW -->
+      <!-- CONTEXT -->
       <section class="cs-section">
-        <h2>Overview</h2>
-        <p>I led the design execution of two major digital transformations for The Old Vic and The Roundhouse — two of London's most iconic cultural venues. Both institutions relied on Skyway, a proprietary white-label event engine that integrated directly into their CRM system, Tessitura.</p>
-        <p>While the functional plumbing was standardised, the user journeys were anything but. My challenge was to architect branded, friction-free checkout flows that respected complex business logic while maintaining the integrity of two very different brands.</p>
-      </section>
-
-      <div class="cs-image-full">
-        <img src="images/purchase-path_venues.png" alt="Component system across both brands" onerror="this.style.display='none'" />
-        <p class="cs-caption">One reusable component system underpinning two entirely different brand experiences — the key to scalable delivery</p>
-      </div>
-
-      <div class="cs-image-full">
-        <img src="images/purchase-paths_background.png" alt="The Old Vic and The Roundhouse" onerror="this.style.display='none'" />
-        <p class="cs-caption">Two of London's most iconic cultural venues — each with a distinct brand identity and complex ticketing requirements</p>
-      </div>
-
-      <!-- CONTEXT / CHALLENGE -->
-      <section class="cs-section">
-        <h2>The challenge</h2>
-        <p>Both venues had sophisticated requirements far beyond a standard e-commerce checkout. The Old Vic's flow needed to handle tiered membership upsells with inline promotional messaging, loyalty points, access ticketing schemes (with separate eligibility paths), and charitable donation prompts. The Roundhouse added complex room booking flows with participant details, youth mailing list opt-ins, and date-of-birth verification for age-restricted programmes.</p>
-        <p>All of this had to be architected within the structural constraints of Tessitura — a highly specialised CRM with rigid data schemas — while feeling intuitive and native to each venue's brand.</p>
+        <h2>Context</h2>
+        <p>As part of a previous project, Google and Apple sign up methods had been added to the Songkick web sign up screen—a change which contributed to a ~30% increase to the overall sign up rate.</p>
       </section>
 
       <!-- FULL-WIDTH IMAGE -->
       <div class="cs-image-full">
-        <img src="images/purchase-paths_comparison.png" alt="Both checkout flows side by side" onerror="this.style.display='none'" />
-        <div class="cs-image-placeholder"><span>The Roundhouse & The Old Vic checkout flows side by side</span></div>
-        <p class="cs-caption">Two distinct brands, one shared platform — the challenge was making each feel entirely its own</p>
+        <img src="images/growth-experiments_new-sign-up.jpg" alt="Redesigned Songkick web sign-up screen with Google and Apple authentication options added" onerror="this.style.display='none'" />
+        <p class="cs-caption">The new sign up screen features Google and Apple sign up methods...</p>
       </div>
 
-      <!-- TWO BRANDS -->
+            <!-- FULL-WIDTH IMAGE -->
+      <div class="cs-image-full">
+        <img src="images/growth-experiments_web-sign-ups.jpg" alt="Chart showing increased sign-up rate after adding Google and Apple authentication methods" onerror="this.style.display='none'" />
+        <p class="cs-caption">...which lead to a significant increase in sign ups.</p>
+      </div>
+
+      <!-- HOWEVER -->
       <section class="cs-section">
-        <h2>A fully branded experience</h2>
-        <p>The Old Vic's brand is heavily typographic and monochrome — precise, theatrical, authoritative. The Roundhouse is dark, bold, and high-energy — reflecting its music and youth culture heritage. Both had to be translated into a purchase path that felt like a seamless extension of the main venue website, not a third-party bolt-on.</p>
-        <p>In both cases, considered typographic treatment and careful colour application were crucial — balancing brand expression with the demands of information-dense checkout pages that need to feel intuitive and easily scannable. I worked with engineering to establish a base of tested, reusable components that could be customised to fit the needs of both clients.</p>
+        <h3>Whilst ostensibly a successful new feature...</h3>
+        <p>...a large percentage of the users who were previously signing up with Spotify were now using Google instead.</p>
       </section>
 
-      <div class="cs-image-full">
-        <img src="images/purchase-paths_branded-approach.png" alt="Both checkout flows side by side" onerror="this.style.display='none'" />
-        <div class="cs-image-placeholder"><span>The Roundhouse & The Old Vic checkout flows side by side</span></div>
-        <p class="cs-caption">Two distinct brands, one shared platform — the challenge was making each feel entirely its own</p>
+      <!-- FULL-WIDTH IMAGE -->
+      <div class="cs-image-full cs-image-no-bg">
+        <img src="images/growth-experiments_since-adding-google.png" alt="Data showing shift from Spotify sign-ups to Google sign-ups since adding alternative authentication" onerror="this.style.display='none'" />
       </div>
 
-      <!-- INTELLIGENT DATA COLLECTION -->
+      <!-- THE ISSUE -->
       <section class="cs-section">
-        <h2>Intelligent data collection</h2>
-        <p>Both venues required sophisticated form architecture — from complex room booking requirements at the Roundhouse to legal declarations and charitable donation flows at The Old Vic.</p>
-        <p>To prevent form fatigue, I used a <strong>progressive reveal strategy</strong>: secondary information — such as accessibility requirements, participant details, or date-of-birth verification — was only surfaced based on the user's previous selections. This kept the interface focused on the primary task at hand and significantly reduced perceived complexity.</p>
-      </section>
+        <h2>The issue</h2>
+        <p>On Songkick, using the Spotify authentication as opposed to any other sign up method results in a journey that is different in one key aspect: When signing up with Spotify, authentication and artist tracking can be completed in a single, efficient step:</p><br>
 
-      <div class="cs-image-full">
-        <img src="images/purchase-paths_data-collection.png" alt="Both checkout flows side by side" onerror="this.style.display='none'" />
-        <p class="cs-caption">Two distinct brands, one shared platform — the challenge was making each feel entirely its own</p>
-      </div>
+        </section>
+        
+            <!-- FULL-WIDTH IMAGE -->
+      <div class="cs-image-full cs-image-no-bg">
+        <img src="images/growth-experiments_one-step-tracking.png" alt="Flow diagram showing Spotify sign-up completing authentication and artist tracking in a single step" onerror="this.style.display='none'" />
+        </div>
 
-      <!-- BEFORE / AFTER: FORM -->
-      <div class="cs-before-after">
-        <div class="cs-before">
-          <span class="cs-ba-label">Traditional approach</span>
-          <div class="cs-ba-item">
-            <strong>All fields shown upfront</strong>
-            Users presented with a wall of inputs regardless of relevance — leading to confusion and abandonment.
+        <section class="cs-section">
+          <h3>When signing up with another method..</h3><p>...tracking artists is done as a separate step following authentication. A screen is shown after authentication prompting users to either connect with Spotify, or track artists manually:</p></section>
+
+       <!-- CAROUSEL -->
+      <div class="cs-img-carousel cs-image-no-bg">
+        <div class="cs-img-carousel-track">
+          <div class="cs-img-carousel-slide">
+            <img src="images/growth-experiments_google-sign-up.png" alt="Songkick onboarding screen showing artist tracking step for Google sign-up users" onerror="this.style.display='none'" />
           </div>
-          <div class="cs-ba-item">
-            <strong>Generic form structure</strong>
-            No differentiation between booking for self vs. someone else; no conditional logic for eligibility paths.
+          <div class="cs-img-carousel-slide">
+            <img src="images/growth-experiments_google-sign-up-2.png" alt="Second screen in the Google sign-up artist tracking flow" onerror="this.style.display='none'" />
           </div>
         </div>
-        <div class="cs-after">
-          <span class="cs-ba-label">Progressive reveal</span>
-          <div class="cs-ba-item">
-            <strong>Context-sensitive fields</strong>
-            Participant details, date-of-birth, and accessibility requirements only appear when relevant to the user's selection.
-          </div>
-          <div class="cs-ba-item">
-            <strong>Conditional eligibility paths</strong>
-            'Booking for someone else' surfaces a dedicated participant flow; membership prompts appear inline at the moment of relevance.
-          </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Previous slide">&#8592;</button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Next slide">&#8594;</button>
+        <div class="carousel-dots">
+          <button class="carousel-dot carousel-dot--active" aria-label="Slide 1"></button>
+          <button class="carousel-dot" aria-label="Slide 2"></button>
         </div>
       </div>
 
-      <!-- TECHNICAL CONSTRAINTS -->
+      <!-- THE ISSUE pt 2 -->
       <section class="cs-section">
-        <h2>Technical constraints</h2>
-        <p>I had to work within the structural parameters of Tessitura — a highly specialised CRM with rigid data schemas. I collaborated closely with backend engineers to map every front-end input to a specific Tessitura attribute.</p>
-        <p>When the CRM lacked a native field for a UX requirement, I worked with the technical team to architect custom data hooks — capturing and storing specialised user data without compromising the stability of the core ticketing engine. This required translating UX intent into technical feasibility in close collaboration with engineering throughout the project.</p>
+        <h2>Diagnosing the problem</h2>
+        <p>As part of the previous work, the number of total sign ups had been tracked closely—but whether or not the new sign up methods had actually moved the needle on activated users had not been investgated fully. On a hunch I dug into the data, observing that since adding Google and Apple, the number of users completing a Spotify sign up (any sign up method) had halved:</p> </section>
+
+              <div class="cs-image-full">
+        <img src="images/growth-experiments_spotify-import.jpg" alt="Chart showing decline in Spotify connection completions after Google and Apple sign-up were added" onerror="this.style.display='none'" />
+      </div>
+
+      <section class="cs-section">
+        <h3>Meaning that this screen,</h3><p>prompting users who did not sign up with Spotify to track artists, was not working very well:</p></section>
+      
+
+              <div class="cs-image-full">
+        <img src="images/growth-experiments_screen-doesnt-work.jpg" alt="Songkick screenshot showing a page titled 'Track all the artists you love' follwed by a 'Connect with Spotify' button, 'Find your favorite artists' search field, and grid of artists to click to track." onerror="this.style.display='none'" />
+                <p class="cs-caption"> The core issues with this page are easily identified: 1) The Spotify button lacks context/is presented as optional. 2) The button competes with search bar and other artist listings. 3) The core value prop is hidden/unclear.</p>
+      </div>
+
+      <section class="cs-section">
+        <h3>As a result,</h3><p>only 4% of non-Spotify sign ups track 30+ artists in month 1. The number of artists tracked by users is a key activation criterion for Songkick—tracking at least 30 artists ensures the users' home feed is sufficiently personalized, with regular email and app notifications of new tour announcements bringing the user back to the product.</p></section>
+      
+
+                    <div class="cs-image-full">
+        <img src="images/growth-experiments_web-sign-ups-tracking-30.jpg" alt="Data showing only 4% of non-Spotify sign-ups track 30 or more artists in their first month" onerror="this.style.display='none'" />
+      </div>
+
+      <section class="cs-section">
+        <h2>Getting the team onboard</h2>
+        <p>Having identified the issue I laid out my findings, as well as a proposed experiment in a one-pager doc, working with my product and engineering partners to develop this into a full experiment plan.</p>
       </section>
 
-      <!-- OUTCOMES -->
-      <section class="cs-section">
-        <h2>Outcomes</h2>
-        <p>Both purchase paths launched on schedule to high client satisfaction. While the agency context limits long-term data access, initial performance indicators were overwhelmingly positive across two fronts:</p>
 
-        <div class="cs-three-col">
-          <div class="cs-three-col-item">
-            <h3>Conversion</h3>
-            <p>Both venues saw an immediate increase in checkout completion rates following launch — attributed to reduced friction across the booking flow and improved form architecture.</p>
-          </div>
-          <div class="cs-three-col-item">
-            <h3>Support reduction</h3>
-            <p>Optimised data collection through well-paced, efficient form design reduced the volume of customer support inquiries received by box office staff post-launch.</p>
-          </div>
-          <div class="cs-three-col-item">
-            <h3>Operational efficiency</h3>
-            <p>Mapping UI inputs directly to Tessitura CRM requirements reduced the manual data cleaning previously required by venue staff — freeing them to focus on high-value member relations.</p>
-          </div>
+                    <div class="cs-image-full">
+        <img src="images/growth-experiments_getting-team-onboard.jpg" alt="Figma screenshot showing the current flow, various data graphs and Experiment designs." onerror="this.style.display='none'" />
+      </div>
+
+      <section class="cs-section">
+        <h2>The Experiment</h2>
+        <p>We developed an experiment in which we would add an additional step after the sign up screen, asking users which music service they currently used. On clicking Spotify, an authentication screen would be shown and a  taste import would be triggered. If the user chose the 'Find artists manually' option, they'd be linked to the old screen, now without the Spotify button and focused on the manual artist search only:</p>
+      </section>
+
+                          <div class="cs-image-full">
+        <img src="images/growth-experiments_the-experiment.jpg" alt="Design of Experiment 1: redesigned Spotify connect screen shown during onboarding for non-Spotify sign-ups" onerror="this.style.display='none'" />
+      </div>
+
+      <section class="cs-section">
+        <h2>Results after one week</h2>
+        <p>Overall, the experiment was very successful, resulting in gains across a few key metrics. It did however also result in a slightly lower sign up conversion rate, likely due to some new friction introduced by the additional onboarding step:</p>
+      </section>
+
+      <div class="cs-table-outer"><div class="cs-table-wrap">
+        <table class="cs-table">
+          <thead>
+            <tr>
+              <th>KPI</th>
+              <th>Old rate</th>
+              <th>Since adding Google/Apple</th>
+              <th>Experiment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Non-Spotify sign ups connecting with Spotify</td>
+              <td>3%</td>
+              <td>3% <span class="cs-badge cs-badge--neutral">→ 0pp</span></td>
+              <td>32% <span class="cs-badge cs-badge--positive">↗ 29pp</span></td>
+            </tr>
+            <tr>
+              <td>% of new users tracking 30+ artists</td>
+              <td>50%</td>
+              <td>24% <span class="cs-badge cs-badge--negative">↘ 26pp</span></td>
+              <td>38% <span class="cs-badge cs-badge--positive">↗ 14pp</span></td>
+            </tr>
+            <tr>
+              <td>Sign up → Onboarding complete</td>
+              <td>74%</td>
+              <td>81% <span class="cs-badge cs-badge--positive">↗ 7pp</span></td>
+              <td>77% <span class="cs-badge cs-badge--negative">↘ 4pp</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div></div>
+
+      <section class="cs-section">
+        <h3>Open questions</h3>
+        <p>At this point, we had a few follow-up questions we wanted to investigate further: Should we add more taste imports to account for non-Spotify users? Should we encourage more users to choose the Spotify sign up earlier in the funnel?</p>
+      </section>
+
+      <section class="cs-section">
+        <h2>Experiment #2</h2>
+        <p>
+          To follow up on the first open question, we ran a ‘fake door’ experiment to help us gauge whether or not adding additional taste imports (any of which would be a significant piece of work) would result in a higher activation rate. In addition to the Spotify option, we added a number of other music services from YouTube music to Tidal. Clicking on any of these options would link users to the Manual Tracking screen, with a note to explain that this particular service wasn't available yet. 
+        </p>
+      </section>
+
+
+                          <div class="cs-image-full">
+        <img src="images/growth-experiments_experiment-2.jpg" alt="Fake door experiment design testing demand for alternative music service imports beyond Spotify" onerror="this.style.display='none'" />
+      </div>
+
+      <section class="cs-section">
+        <h2>Results after 24 hours</h2>
+        <p>We ran this experiment for only 24 hours, seeking to minimize the amount of frustration users would experience. We kept a close eye on our key metrics, none of which moved significantly (as expected):</p>
+      </section>
+
+      <div class="cs-table-outer"><div class="cs-table-wrap">
+        <table class="cs-table">
+          <thead>
+            <tr>
+              <th>KPI</th>
+              <th>Old rate</th>
+              <th>Since adding Google/Apple</th>
+              <th>Experiment #1</th>
+              <th>Experiment #2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Non-Spotify sign ups connecting with Spotify</td>
+              <td>3%</td>
+              <td>3% <span class="cs-badge cs-badge--neutral">→ 0pp</span></td>
+              <td>32% <span class="cs-badge cs-badge--positive">↗ 29pp</span></td>
+              <td>32% <span class="cs-badge cs-badge--neutral">→ 0pp</span></td>
+            </tr>
+            <tr>
+              <td>% of new users tracking 30+ artists</td>
+              <td>50%</td>
+              <td>24% <span class="cs-badge cs-badge--negative">↘ 26pp</span></td>
+              <td>38% <span class="cs-badge cs-badge--positive">↗ 14pp</span></td>
+              <td>38% <span class="cs-badge cs-badge--neutral">→ 0pp</span></td>
+            </tr>
+            <tr>
+              <td>Sign up → Onboarding complete</td>
+              <td>74%</td>
+              <td>81% <span class="cs-badge cs-badge--positive">↗ 7pp</span></td>
+              <td>77% <span class="cs-badge cs-badge--negative">↘ 4pp</span></td>
+              <td>76% <span class="cs-badge cs-badge--negative">↘ 1pp</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div></div>
+
+      <section class="cs-section">
+        <h3>Insights</h3>
+        <p>Instead, this experiment gave us valuble insight into which music services our users would be most interested in. Spotify was the clear winner, with YouTube Music in second place.</p><p>We also observed some interesting regional differences: YouTube Music in 2nd place in most places, but not the UK; Spotify is especially strong in the US; Amazon Music and Apple Music each take 3rd place about 50% of the time; Deezer is strong in France and Brasil.</p><br>
+        <div class="cs-table-outer cs-table-outer--fade-bottom cs-table-small">
+        <div class="cs-table-wrap">
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th>Music service</th>
+                <th>CTR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Spotify</td>
+                <td>48%</td>
+              </tr>
+              <tr>
+                <td>YouTube Music</td>
+                <td>15%</td>
+              </tr>
+              <tr>
+                <td>Apple Music</td>
+                <td>9%</td>
+              </tr>
+              <tr>
+                <td>Amazon Music</td>
+                <td>8%</td>
+              </tr>
+              <tr>
+                <td>Deezer</td>
+                <td>7%</td>
+              </tr>
+              <tr class="cs-row--faded">
+                <td>Pandora</td>
+                <td>5%</td>
+              </tr>
+              <tr class="cs-row--faded">
+                <td>Soundcloud</td>
+                <td>4%</td>
+              </tr>
+              <tr class="cs-row--faded">
+                <td>Tidal</td>
+                <td>2%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
       </section>
 
-      <!-- REFLECTION -->
       <section class="cs-section">
-        <h2>Reflection</h2>
-        <p>This project pushed me to think carefully about the intersection of brand expression and functional clarity — two things that can easily work against each other in a complex checkout flow. The solution was always in the components: designing a reusable base that could be dressed for either brand without compromising the underlying UX logic.</p>
-        <p>Working within the constraints of a third-party CRM also sharpened my ability to collaborate with engineers early and often — turning technical limitations into design decisions rather than late-stage surprises.</p>
+        <h2>Thinking ahead—experiment #3</h2>
+        <p>An experiment we had planned out but didn't get to run focused on the second of our open questions. Since a large percentage of Spotify users chooses to sign up with Google/others rather than Spotify, can we catch Spotify users earlier in the funnel? Or, would this be too great a friction point for non-Spotify users?</p><p>I designed an experiment in which the Spotify sign up method would be the only method shown on the sign up screen, alongisde a 'Recommended' flag. A 'more options' accordeon would reveal the additional sign up methods.</p>
       </section>
-
-      <div class="cs-image-full">
-        <img src="images/purchase-paths_seatmap.png" alt="Component system across both brands" onerror="this.style.display='none'" />
-        <p class="cs-caption">One reusable component system underpinning two entirely different brand experiences — the key to scalable delivery</p>
+      
+                                <div class="cs-image-full">
+        <img src="images/growth-experiments_experiment-3.jpg" alt="Proposed design for Experiment 3: catching Spotify users earlier by surfacing Spotify sign-up first in the funnel" onerror="this.style.display='none'" />
       </div>
 
     </div>
@@ -216,7 +359,14 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Julia Rosner-Uddin.</p>
+    <div class="footer-inner">
+      <span>© 2026 Julia Rosner-Uddin</span>
+      <div class="footer-links">
+        <a href="mailto:julia.s.rosner@gmail.com">julia.s.rosner@gmail.com</a>
+        <a href="https://linkedin.com/in/juliarosner" target="_blank">LinkedIn</a>
+        <a href="images/julia-rosner-cv.pdf" download>Download CV</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>

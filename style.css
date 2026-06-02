@@ -393,7 +393,7 @@ nav ul a:hover {
   flex-direction: column;
 }
 
-.card:hover {
+.card:not(.card--static):hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.08);
 }
@@ -433,7 +433,7 @@ nav ul a:hover {
   transition: transform 0.4s;
 }
 
-.card:hover .card-image img {
+.card:not(.card--static):hover .card-image img {
   transform: scale(1.05);
 }
 
@@ -587,14 +587,13 @@ nav ul a:hover {
 footer {
   background: var(--grey-light);
   color: var(--grey-text);
-  padding: 28px 40px;
+  padding: 28px 28px;
   font-size: 13px;
   margin: 12px;
   border-radius: var(--radius);
 }
 
 .footer-inner {
-  max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -707,5 +706,9 @@ footer {
 
   .card--first .card-image img {
     object-position: bottom;
+  }
+
+  .about-grid {
+    padding: 0;
   }
 }
